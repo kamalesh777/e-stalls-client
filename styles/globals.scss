@@ -575,14 +575,21 @@ ul.categories-list li {
 	border-top: 1px solid rgb(255 255 255 / 15%);
 	z-index: 3
 }
-
+.cat-list {
+    height: 200px;
+}
+.cat-list a {
+	color: #fff;
+}
 .tags-box .tag-link {
-	background: rgb(0 0 0 / 25%);
-	padding: 2px 8px;
-	border-radius: 48px;
-	display: inline-flex;
-	margin-bottom: 4px;
-	font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 5px 12px;
+    border-radius: 48px;
+    display: inline-flex;
+    margin-right: 5px;
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+    color: #fff;
 }
 
 /* Back to Top Button */
