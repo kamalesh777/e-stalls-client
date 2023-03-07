@@ -315,13 +315,12 @@ Product Effect
 	color: #333;
 }
 
-.product-list .btn-light {
-	color: #333;
-	border: 1px solid #9d9d9d;
-	background: #fff;
+.btn-light {
+    color: #fff;
+    background-color: rgb(255 255 255 / 15%);
+    border-color: rgb(255 255 255 / 15%);
 }
-
-.product-list .btn-light:hover {
+.btn-light:hover {
 	box-shadow: 0 0 10px #69e1ff;
 }
 
@@ -1825,7 +1824,13 @@ body.bg-theme15 {
 	object-fit: cover;
   }
 
+  .product-list-view .card {
+	background: rgb(3 22 27 / 26%);
+  }
 
+  .product-list-card .product-action {
+	position: relative;
+  }
 /* Responsive */
 
 @media screen and (max-width: 1280px) {

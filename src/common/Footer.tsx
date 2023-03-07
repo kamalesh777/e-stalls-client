@@ -172,16 +172,16 @@ const Footer = (): JSX.Element => (
             <div className="payment-icon">
               <div className="row row-cols-auto g-2 justify-content-end">
                 <div className="col">
-                  <img src="assets/images/icons/visa.png" alt="" />
+                  <img src="/assets/images/icons/visa.png" alt="" />
                 </div>
                 <div className="col">
-                  <img src="assets/images/icons/paypal.png" alt="" />
+                  <img src="/assets/images/icons/paypal.png" alt="" />
                 </div>
                 <div className="col">
-                  <img src="assets/images/icons/mastercard.png" alt="" />
+                  <img src="/assets/images/icons/mastercard.png" alt="" />
                 </div>
                 <div className="col">
-                  <img src="assets/images/icons/american-express.png" alt="" />
+                  <img src="/assets/images/icons/american-express.png" alt="" />
                 </div>
               </div>
             </div>

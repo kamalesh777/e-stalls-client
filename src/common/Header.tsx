@@ -69,7 +69,7 @@ const HeaderComponent = (): JSX.Element => (
               </div>
               <div className="logo d-none d-lg-flex">
                 <a href="index.html">
-                  <img src="assets/images/estalls-logo.webp" className="estalls-logo" alt="" />
+                  <img src="/assets/images/estalls-logo.webp" className="estalls-logo" alt="" />
                 </a>
               </div>
             </div>
@@ -131,7 +131,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/01.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/01.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
@@ -147,7 +147,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/05.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/05.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
@@ -163,7 +163,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/17.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/17.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
@@ -179,7 +179,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/10.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/10.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
@@ -195,7 +195,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/08.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/08.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
@@ -211,7 +211,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/18.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/18.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
@@ -227,7 +227,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/04.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/04.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
@@ -243,7 +243,7 @@ const HeaderComponent = (): JSX.Element => (
                                   <BiX />
                                 </div>
                                 <div className="cart-product">
-                                  <img src="assets/images/products/16.png" className="" alt="product image" />
+                                  <img src="/assets/images/products/16.png" className="" alt="product image" />
                                 </div>
                               </div>
                             </div>
