@@ -69,6 +69,7 @@ const CategoryList = (): JSX.Element => (
       <Swiper
         className="product-grid"
         slidesPerView={7}
+        loop={true}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -81,9 +82,9 @@ const CategoryList = (): JSX.Element => (
             <div className="item">
               <div className="card rounded-0 product-card border">
                 <div className="card-body text-center">
-                  <img src={obj.image} className="img-fluid w-75" alt="..." />
+                  <img src={obj.image} className="img-fluid w-75 mx-auto" alt="..." />
                 </div>
-                <div className="card-footer text-center">
+                <div className="card-footer border-0 text-center">
                   <h6 className="mb-1 text-uppercase">{obj.title}</h6>
                 </div>
               </div>
