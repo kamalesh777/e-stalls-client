@@ -1,4 +1,3 @@
-import { Modal, Button } from 'antd'
 import React, { useState } from 'react'
 import { mutate } from 'swr'
 import Axios from '@/axios'
@@ -44,24 +43,25 @@ const DeleteModal = ({
     setDeleteModalState(false)
   }
   return (
-    <Modal
-      title="Delete"
-      onCancel={destroyModal}
-      centered
-      width={width || 350}
-      open={deleteModalState}
-      footer={[
-        <Button danger type="primary" key="button" disabled={btnLoading} loading={btnLoading} onClick={deleteCorpHandler}>
-          Delete
-        </Button>,
-        <Button key="back" onClick={destroyModal}>
-          Cancel
-        </Button>,
-      ]}
-    >
-      {children}
-      <p className="mt-0">Are you sure you want to delete?</p>
-    </Modal>
+    // <Modal
+    //   title="Delete"
+    //   onCancel={destroyModal}
+    //   centered
+    //   width={width || 350}
+    //   open={deleteModalState}
+    //   footer={[
+    //     <Button danger type="primary" key="button" disabled={btnLoading} loading={btnLoading} onClick={deleteCorpHandler}>
+    //       Delete
+    //     </Button>,
+    //     <Button key="back" onClick={destroyModal}>
+    //       Cancel
+    //     </Button>,
+    //   ]}
+    // >
+    //   {children}
+    //   <p className="mt-0">Are you sure you want to delete?</p>
+    // </Modal>
+    <p className="mt-0">Are you sure you want to delete?</p>
   )
 }
 
