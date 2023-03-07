@@ -1,9 +1,11 @@
 import NormalLayout from '@/layout/NormalLayout'
+import HomePage from '@/view/Home'
+
 
 export default function Home(): JSX.Element {
   return (
     <NormalLayout>
-      <h1>Home</h1>
+      <HomePage />
     </NormalLayout>
   )
 }

@@ -240,29 +240,52 @@ body.offcanvas-active {
 ===========================================
 */
 .offer-slider {
-	height: 400px;
+	height: 420px;
 }
 
-.offer-slider .carousel {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.offer-slider .swiper {
+	width: 100%;
 	height: 100%;
-}
-
-.offer-slider .carousel-inner {
-	height: 100%;
-	display: flex;
-}
-
-.offer-slider .carousel-content {
-	margin-top: 4rem;
-}
-
-.offer-slider .carousel-content * {
+  }
+  
+  .offer-slider .swiper-slide {
 	text-align: center;
-	color: #000;
-}
+	font-size: 18px;
+	background: #232323;
+  
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .offer-slider .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+// .offer-slider .carousel {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	height: 100%;
+// }
+
+// .offer-slider .carousel-inner {
+// 	height: 100%;
+// 	display: flex;
+// }
+
+// .offer-slider .carousel-content {
+// 	margin-top: 4rem;
+// }
+
+// .offer-slider .carousel-content * {
+// 	text-align: center;
+// 	color: #000;
+// }
 
 .bg-cover {
 	background-size: cover;
@@ -272,6 +295,8 @@ body.offcanvas-active {
 /* .feauture-section {
 	background: #003a48;
 } */
+
+
 
 /* 
 Product Effect 
