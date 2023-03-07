@@ -1,11 +1,10 @@
-@import url('bootstrap/dist/css/bootstrap.min.css');
-
 /* General */
 
 body {
 	font-size: 14px;
 	letter-spacing: .5px;
 	font-family: Roboto, sans-serif;
+  color: #fff;
 }
 
 input::placeholder {
@@ -25,9 +24,17 @@ a {
 /* Header */
 
 .header-wrapper .top-menu .nav-link {
-	font-size: 88%;
+	font-size: 95%;
 }
-
+.input-search {
+  position: relative;
+}
+.searchBtn {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  font-size: 1.3rem;
+}
 .logo img {
 	max-height: 35px;
 }
@@ -58,6 +65,16 @@ a {
 
 .top-cart-icons ul.navbar-nav .nav-item a.cart-link {
 	font-size: 30px;
+}
+.top-menu {
+	background: #40c8ea;
+}
+.top-menu .nav-link{
+  color: #fff;
+}
+.top-cart-icons .nav-link {
+  font-size: 1rem;
+  color: #fff;
 }
 
 .blog-sharing a {
@@ -1650,10 +1667,6 @@ ul.categories-list li {
 	background-size: 100% 100%;
 	background-position: center;
 	transition: background .3s;
-}
-
-.top-menu {
-	background: #40c8ea;
 }
 
 body.bg-theme1 {
