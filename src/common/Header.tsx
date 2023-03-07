@@ -76,7 +76,7 @@ const HeaderComponent = (): JSX.Element => (
           </div>
           <div className="col-12 col-md order-4 order-md-2">
             <div className="flex-nowrap mx-xl-3 input-search">
-              <input type="text" className="form-control w-100" placeholder="Search for Products" />
+              <input type="text" className="form-control text-white w-100" placeholder="Search for Products" />
               <BiSearch className="searchBtn" />
             </div>
           </div>
