@@ -166,7 +166,7 @@ const dataArr = [
 const ProductList = (): JSX.Element => {
   const [openViwModal, setOpenViewModal] = useState<boolean>(false)
 
-  const openModalHandler = () => setOpenViewModal(true)
+  const openModalHandler = (): void => setOpenViewModal(true)
   return (
     <>
       {dataArr.map((obj, index) => (

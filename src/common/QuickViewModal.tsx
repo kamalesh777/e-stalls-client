@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
+import { BiX } from 'react-icons/bi'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css/thumbs'
-import { BiX } from 'react-icons/bi'
 
 interface propTypes {
   openModal: boolean

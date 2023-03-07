@@ -84,7 +84,9 @@ const HeaderComponent = (): JSX.Element => (
             <div className="top-cart-icons">
               <nav className="navbar navbar-expand">
                 <ul className="navbar-nav ms-auto">
-                  <button className="align-self-center btn btn-light btn-ecomm btn-lg">Login Now</button>
+                  <li className="nav-item align-self-center">
+                    <button className="btn btn-light btn-ecomm btn-lg">Login Now</button>
+                  </li>
                   <li className="nav-item align-self-center">
                     <a href="account-dashboard.html" className="nav-link">
                       Become a Seller
