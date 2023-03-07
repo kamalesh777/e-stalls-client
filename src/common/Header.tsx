@@ -1,5 +1,5 @@
 import React from 'react'
-import { BiHeart, BiMenu, BiSearch, BiShoppingBag, BiUser } from 'react-icons/bi'
+import { BiHeart, BiMenu, BiSearch, BiShoppingBag, BiUser, BiX } from 'react-icons/bi'
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
@@ -84,7 +84,7 @@ const HeaderComponent = (): JSX.Element => (
             <div className="top-cart-icons">
               <nav className="navbar navbar-expand">
                 <ul className="navbar-nav ms-auto">
-                  <button className="btn btn-primary align-self-center">Login</button>
+                  <button className="align-self-center btn btn-light btn-ecomm btn-lg">Login Now</button>
                   <li className="nav-item align-self-center">
                     <a href="account-dashboard.html" className="nav-link">
                       Become a Seller
@@ -126,7 +126,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/01.png" className="" alt="product image" />
@@ -142,7 +142,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/05.png" className="" alt="product image" />
@@ -158,7 +158,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/17.png" className="" alt="product image" />
@@ -174,7 +174,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/10.png" className="" alt="product image" />
@@ -190,7 +190,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/08.png" className="" alt="product image" />
@@ -206,7 +206,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/18.png" className="" alt="product image" />
@@ -222,7 +222,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/04.png" className="" alt="product image" />
@@ -238,7 +238,7 @@ const HeaderComponent = (): JSX.Element => (
                               </div>
                               <div className="position-relative">
                                 <div className="cart-product-cancel position-absolute">
-                                  <i className="bx bx-x" />
+                                  <BiX />
                                 </div>
                                 <div className="cart-product">
                                   <img src="assets/images/products/16.png" className="" alt="product image" />
