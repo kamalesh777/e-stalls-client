@@ -27,16 +27,16 @@ const ShopCartView = (): JSX.Element => (
               </div>
               <div className="col-12 col-lg-3">
                 <div className="cart-action text-center">
-                  <input type="number" className="form-control rounded-0" min="1" />
+                  <input type="number" className="form-control rounded-1" min="1" />
                 </div>
               </div>
               <div className="col-12 col-lg-3">
                 <div className="text-center">
                   <div className="d-flex gap-2 justify-content-center justify-content-lg-end">
-                    <a href="javascript:;" className="btn btn-light rounded-0 btn-ecomm">
+                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
                       <BiXCircle className="me-1 fs-5" /> Remove
                     </a>
-                    <a href="javascript:;" className="btn btn-light rounded-0 btn-ecomm">
+                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
                       <BiHeart className="fs-5" />
                     </a>
                   </div>
@@ -64,16 +64,16 @@ const ShopCartView = (): JSX.Element => (
               </div>
               <div className="col-12 col-lg-3">
                 <div className="cart-action text-center">
-                  <input type="number" className="form-control rounded-0" min="1" />
+                  <input type="number" className="form-control rounded-1" min="1" />
                 </div>
               </div>
               <div className="col-12 col-lg-3">
                 <div className="text-center">
                   <div className="d-flex gap-2 justify-content-center justify-content-lg-end">
-                    <a href="javascript:;" className="btn btn-light rounded-0 btn-ecomm">
+                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
                       <BiXCircle className="me-1 fs-5" /> Remove
                     </a>
-                    <a href="javascript:;" className="btn btn-light rounded-0 btn-ecomm">
+                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
                       <BiHeart className="fs-5" />
                     </a>
                   </div>
@@ -84,7 +84,7 @@ const ShopCartView = (): JSX.Element => (
         </div>
         <div className="col-12 col-xl-4">
           <div className="checkout-form p-3">
-            <div className="card rounded-0 border-0 bg-transparent mb-0 shadow-none">
+            <div className="card rounded-1 border-0 bg-transparent mb-0 shadow-none">
               <div className="card-body">
                 <p className="mb-2">
                   Subtotal: <span className="float-end">$198.00</span>

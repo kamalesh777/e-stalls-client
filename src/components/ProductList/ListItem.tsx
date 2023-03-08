@@ -13,7 +13,7 @@ const ListItem = (): JSX.Element => {
           <div className="d-flex flex-wrap flex-grow-1 gap-1">
             <div className="d-flex align-items-center flex-nowrap">
               <p className="mb-0 font-13 text-nowrap">Sort By:</p>
-              <select className="form-select ms-3 rounded-0">
+              <select className="form-select ms-3 rounded-1">
                 <option value="menu_order">Default sorting</option>
                 <option value="popularity">Sort by popularity</option>
                 <option value="rating">Sort by average rating</option>
@@ -26,7 +26,7 @@ const ListItem = (): JSX.Element => {
           <div className="d-flex flex-wrap">
             <div className="d-flex align-items-center flex-nowrap">
               <p className="mb-0 font-13 text-nowrap">Show:</p>
-              <select className="form-select ms-3 rounded-0">
+              <select className="form-select ms-3 rounded-1">
                 <option>9</option>
                 <option>12</option>
                 <option>16</option>
@@ -36,15 +36,15 @@ const ListItem = (): JSX.Element => {
               </select>
             </div>
           </div>
-          <div className="btn btn-ecomm btn-light rounded-0">
+          <div className="btn btn-ecomm btn-light rounded-1">
             <BiGrid className="fs-6" />
           </div>
-          <div className="btn btn-ecomm btn-white rounded-0">
+          <div className="btn btn-ecomm btn-white rounded-1">
             <BiListUl className="fs-6" />
           </div>
         </div>
         <div className="product-grid">
-          <div className="card rounded-0 product-list-card">
+          <div className="card rounded-1 product-list-card">
             <div className="d-flex align-items-center justify-content-end gap-3 position-absolute end-0 top-0 m-3">
               <div className="product-wishlist">
                 <BiHeart className="text-dark" />

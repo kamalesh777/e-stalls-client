@@ -174,7 +174,7 @@ const ProductList = (): JSX.Element => {
           <div className="container">
             <div className="d-flex align-items-center mb-4">
               <h5 className="text-uppercase mb-0">{obj.label}</h5>
-              <a href="shop-categories.html" className="btn btn-light ms-auto rounded-0">
+              <a href="shop-categories.html" className="btn btn-light ms-auto rounded-1">
                 {obj.buttonText}
                 <BiChevronRight />
               </a>
@@ -192,7 +192,7 @@ const ProductList = (): JSX.Element => {
             >
               {obj?.data?.map(item => (
                 <SwiperSlide key={item._id}>
-                  <div className="card rounded-0 product-card">
+                  <div className="card rounded-1 product-card">
                     <div className="card-header bg-transparent border-bottom-0">
                       <div className="d-flex align-items-center justify-content-end gap-3">
                         <div className="product-wishlist">

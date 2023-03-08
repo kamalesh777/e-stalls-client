@@ -36,7 +36,9 @@ a {
 hr {
     margin-bottom: 1.7rem;
 }
-
+.fs-7 {
+	font-size: 0.8rem;
+}
 .wrapper {
 	width: 100%;
 	position: relative
@@ -243,14 +245,25 @@ Menu
 /* .feauture-section {
 	background: #003a48;
 } */
-
+.card {
+	box-shadow: 2px 2px 4px $bg-dark-1;
+	border-color: $bg-dark-1;
+}
 /*========== Product-list-page =========*/
 
-.product-list-page .filter-menu {
+.product-list-page .filter-menu,
+.profile-page .side-bar {
 	background-color: $bg-light-2;
 }
 input[type="checkbox"] + label{
     margin-left: 5px;
+}
+
+
+/*==========Profile===================*/
+.profile-avatar {
+	max-width: 60px;
+	margin-right: 10px;
 }
 /* 
 Product Effect 

@@ -1,13 +1,8 @@
 import React from 'react'
 
 const FilterMenu = (): JSX.Element => (
-  <div className="card filter-menu rounded-0 w-100">
+  <div className="card filter-menu rounded-1 w-100">
     <div className="card-body">
-      <div className="align-items-center d-flex d-xl-none">
-        <h6 className="text-uppercase mb-0">Filter</h6>
-        <div className="btn-mobile-filter-close btn-close ms-auto cursor-pointer" />
-      </div>
-      <hr className="d-flex d-xl-none" />
       <div className="product-categories">
         <h6 className="text-uppercase mb-3">Categories</h6>
         <ul className="list-unstyled mb-0 categories-list">
@@ -58,7 +53,7 @@ const FilterMenu = (): JSX.Element => (
         <h6 className="text-uppercase mb-3">Price</h6>
         <div className="my-4" id="slider" />
         <div className="d-flex align-items-center">
-          <button type="button" className="btn btn-white btn-sm text-uppercase rounded-0 font-13 fw-500">
+          <button type="button" className="btn btn-white btn-sm text-uppercase rounded-1 font-13 fw-500">
             Filter
           </button>
           <div className="ms-auto">
