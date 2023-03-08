@@ -84,7 +84,7 @@ const ShopCartView = (): JSX.Element => (
         </div>
         <div className="col-12 col-xl-4">
           <div className="checkout-form p-3">
-            <div className="card rounded-0 border bg-transparent mb-0 shadow-none">
+            <div className="card rounded-0 border-0 bg-transparent mb-0 shadow-none">
               <div className="card-body">
                 <p className="mb-2">
                   Subtotal: <span className="float-end">$198.00</span>

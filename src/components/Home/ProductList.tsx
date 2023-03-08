@@ -172,14 +172,13 @@ const ProductList = (): JSX.Element => {
       {dataArr.map((obj, index) => (
         <section key={index} className="product-list">
           <div className="container">
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center mb-4">
               <h5 className="text-uppercase mb-0">{obj.label}</h5>
               <a href="shop-categories.html" className="btn btn-light ms-auto rounded-0">
                 {obj.buttonText}
                 <BiChevronRight />
               </a>
             </div>
-            <hr className="dark" />
             <Swiper
               loop={true}
               className="product-grid"
