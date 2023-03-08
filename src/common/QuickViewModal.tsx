@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap'
 import { BiCartAdd, BiHeart, BiX } from 'react-icons/bi'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css/thumbs'
+import 'swiper/swiper.min.css'
 
 interface propTypes {
   openModal: boolean
@@ -16,7 +16,7 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
 
   return (
     <Modal show={openModal} onHide={handleClose} size="xl" centered>
-      <div className="bg-dark-4 quick-view-content">
+      <div className="quick-view-content">
         <BiX onClick={handleClose} className="float-end fs-2 cursor-pointer" />
         <div className="row g-4">
           <div className="col-12 col-lg-6">
@@ -27,16 +27,16 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
               thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
             >
               <SwiperSlide>
-                <img src="assets/images/product-gallery/01.png" className="img-fluid" alt="" />
+                <img src="/assets/images/product-gallery/01.png" className="img-fluid" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="assets/images/product-gallery/02.png" className="img-fluid" alt="" />
+                <img src="/assets/images/product-gallery/02.png" className="img-fluid" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="assets/images/product-gallery/03.png" className="img-fluid" alt="" />
+                <img src="/assets/images/product-gallery/03.png" className="img-fluid" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="assets/images/product-gallery/04.png" className="img-fluid" alt="" />
+                <img src="/assets/images/product-gallery/04.png" className="img-fluid" alt="" />
               </SwiperSlide>
             </Swiper>
             <Swiper
@@ -51,16 +51,16 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
               onSwiper={setThumbsSwiper}
             >
               <SwiperSlide>
-                <img src="assets/images/product-gallery/01.png" className="" alt="" />
+                <img src="/assets/images/product-gallery/01.png" className="" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="assets/images/product-gallery/02.png" className="" alt="" />
+                <img src="/assets/images/product-gallery/02.png" className="" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="assets/images/product-gallery/03.png" className="" alt="" />
+                <img src="/assets/images/product-gallery/03.png" className="" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="assets/images/product-gallery/04.png" className="" alt="" />
+                <img src="/assets/images/product-gallery/04.png" className="" alt="" />
               </SwiperSlide>
             </Swiper>
           </div>
