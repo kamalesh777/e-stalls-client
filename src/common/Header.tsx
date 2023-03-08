@@ -1,5 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
-import { BiHeart, BiMenu, BiSearch, BiShoppingBag, BiUser, BiX } from 'react-icons/bi'
+import { BiCartAdd, BiHeart, BiMenu, BiSearch, BiShoppingBag, BiUser, BiX } from 'react-icons/bi'
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
@@ -250,16 +251,15 @@ const HeaderComponent = (): JSX.Element => (
                           </a>
                         </div>
                       </PerfectScrollbar>
-                      <a href="#">
-                        <div className="text-center cart-footer d-flex align-items-center">
-                          <h5 className="mb-0">TOTAL</h5>
-                          <h5 className="mb-0 ms-auto">$189.00</h5>
-                        </div>
-                      </a>
+                      <div className="text-center cart-footer d-flex align-items-center">
+                        <h5 className="mb-0">TOTAL</h5>
+                        <h5 className="mb-0 ms-auto">$189.00</h5>
+                      </div>
                       <div className="d-grid p-3 border-top">
-                        <a href="#" className="btn btn-light btn-ecomm">
-                          CHECKOUT
-                        </a>
+                        <Link href="/shop-cart" className="btn btn-light btn-ecomm">
+                          <BiCartAdd className="cart-add" />
+                          GO TO CART
+                        </Link>
                       </div>
                     </div>
                   </li>
