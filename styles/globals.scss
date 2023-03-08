@@ -4,7 +4,7 @@ body {
 	font-size: 14px;
 	letter-spacing: .5px;
 	font-family: Roboto, sans-serif;
-  color: #fff;
+  	color: #fff;
 }
 
 input::placeholder {
@@ -325,7 +325,7 @@ Product Effect
     border-color: rgb(255 255 255 / 15%);
 }
 .btn-light:hover {
-	box-shadow: 0 0 10px #69e1ff;
+	box-shadow: 0 0 6px #40c8ea;
 }
 
 .product-grid .card.product-card {
@@ -1835,6 +1835,15 @@ body.bg-theme15 {
   .product-list-card .product-action {
 	position: relative;
   }
+  .extra-padding {
+    padding: 3rem 0;
+}
+.text-disable-color {
+    color: #e1e1e1;
+}
+.cart-action .form-control {
+	color: #fff;
+}
 /* Responsive */
 
 @media screen and (max-width: 1280px) {
