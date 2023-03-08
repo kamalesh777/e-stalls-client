@@ -14,16 +14,16 @@ const Footer = (): JSX.Element => (
             </div>
             <div className="phone mb-3">
               <p className="mb-0 text-uppercase text-white">Phone</p>
-              <p className="mb-0 font-13">Toll Free (123) 472-796</p>
-              <p className="mb-0 font-13">Mobile : +91-9910XXXX</p>
+              <p className="mb-0 font-14">Toll Free (123) 472-796</p>
+              <p className="mb-0 font-14">Mobile : +91-9910XXXX</p>
             </div>
             <div className="email mb-3">
               <p className="mb-0 text-uppercase text-white">Email</p>
-              <p className="mb-0 font-13">mail@example.com</p>
+              <p className="mb-0 font-14">mail@example.com</p>
             </div>
             <div className="working-days mb-3">
               <p className="mb-0 text-uppercase text-white">WORKING DAYS</p>
-              <p className="mb-0 font-13">Mon - FRI / 9:30 AM - 6:30 PM</p>
+              <p className="mb-0 font-14">Mon - FRI / 9:30 AM - 6:30 PM</p>
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ const Footer = (): JSX.Element => (
                   Subscribe
                 </a>
               </div>
-              <p className="mt-2 mb-0 font-13">
+              <p className="mt-2 mb-0 font-14">
                 Subscribe to our newsletter to receive early discount offers, updates and new products info.
               </p>
             </div>
