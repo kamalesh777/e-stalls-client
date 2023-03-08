@@ -179,7 +179,7 @@ const ProductList = (): JSX.Element => {
                 <BiChevronRight />
               </a>
             </div>
-            <hr />
+            <hr className="dark" />
             <Swiper
               loop={true}
               className="product-grid"
@@ -201,14 +201,14 @@ const ProductList = (): JSX.Element => {
                         </div>
                       </div>
 
-                      <a href="product-details.html">
+                      <div className="product-image">
                         <img src={item.image} className="card-img-top" alt="..." />
-                      </a>
+                      </div>
                       <div className="card-body">
                         <div className="product-info text-center">
                           <p className="product-catergory font-13 mb-1">{item.category}</p>
                           <h6 className="product-name fs-5 mb-2">{item.title}</h6>
-                          <p className="text-white fs-10 product-price">{item.price}</p>
+                          <p className="fs-10 product-price">{item.price}</p>
                           <div className="product-action">
                             <div className="d-grid gap-2">
                               <a href="#" className="btn btn-light btn-ecomm">

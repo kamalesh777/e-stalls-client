@@ -2,7 +2,7 @@ import React from 'react'
 import { BiHeart, BiXCircle } from 'react-icons/bi'
 
 const ShopCartView = (): JSX.Element => (
-  <div className="extra-padding bg-dark-3">
+  <div className="extra-padding cart-page">
     <div className="container">
       <div className="row">
         <div className="col-12 col-xl-8">
@@ -83,7 +83,7 @@ const ShopCartView = (): JSX.Element => (
           </div>
         </div>
         <div className="col-12 col-xl-4">
-          <div className="checkout-form p-3 bg-dark-3">
+          <div className="checkout-form p-3">
             <div className="card rounded-0 border bg-transparent mb-0 shadow-none">
               <div className="card-body">
                 <p className="mb-2">
@@ -104,7 +104,7 @@ const ShopCartView = (): JSX.Element => (
                 </h5>
                 <div className="my-4" />
                 <div className="d-grid">
-                  <a href="javascript:;" className="btn btn-white btn-ecomm">
+                  <a href="javascript:;" className="btn btn-light btn-ecomm">
                     Proceed to Checkout
                   </a>
                 </div>
