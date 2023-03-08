@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
-import { BiX } from 'react-icons/bi'
+import { BiCartAdd, BiHeart, BiX } from 'react-icons/bi'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css/thumbs'
@@ -18,7 +18,7 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
     <Modal show={openModal} onHide={handleClose} size="xl" centered>
       <div className="bg-dark-4 quick-view-content">
         <BiX onClick={handleClose} className="float-end fs-2 cursor-pointer" />
-        <div className="row g-3">
+        <div className="row g-4">
           <div className="col-12 col-lg-6">
             <Swiper
               loop={true}
@@ -65,11 +65,10 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
             </Swiper>
           </div>
           <div className="col-12 col-lg-6">
-            <div className="product-info-section p-3">
-              <h3 className="mt-3 mt-lg-0 mb-0">Allen Solly Men's Polo T-Shirt</h3>
+            <div className="product-info-section">
+              <h3 className="mt-3 mt-lg-0 mb-0">Allen Solly Mens Polo T-Shirt</h3>
               <div className="product-rating d-flex align-items-center mt-2">
                 <div className="rates cursor-pointer font-13">
-                  {' '}
                   <i className="bx bxs-star text-warning" />
                   <i className="bx bxs-star text-warning" />
                   <i className="bx bxs-star text-warning" />
@@ -81,8 +80,8 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
                 </div>
               </div>
               <div className="d-flex align-items-center mt-3 gap-2">
-                <h5 className="mb-0 text-decoration-line-through text-light-3">$98.00</h5>
                 <h4 className="mb-0">$49.00</h4>
+                <h5 className="mb-0 text-decoration-line-through text-light-4">$98.00</h5>
               </div>
               <div className="mt-3">
                 <h6>Discription :</h6>
@@ -129,12 +128,12 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
                 </div>
               </div>
               <div className="d-flex gap-2 mt-3">
-                <a href="javascript:;" className="btn btn-white btn-ecomm">
-                  <i className="bx bxs-cart-add" />
+                <a href="#" className="btn btn-white btn-ecomm">
+                  <BiCartAdd className="cart-add" />
                   Add to Cart
                 </a>
-                <a href="javascript:;" className="btn btn-light btn-ecomm">
-                  <i className="bx bx-heart" />
+                <a href="#" className="btn btn-light btn-ecomm">
+                  <BiHeart className="cart-add" />
                   Add to Wishlist
                 </a>
               </div>

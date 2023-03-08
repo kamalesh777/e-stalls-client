@@ -1278,7 +1278,8 @@ ul.categories-list li {
 	color: #fff
 }
 
-.btn-white {
+.btn-white,
+.btn-white:hover {
 	background-color: #fff;
 	border-color: #e7eaf3
 }
@@ -1784,7 +1785,8 @@ body.bg-theme15 {
 	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 20px;
+	padding: 20px !important;
+    border: 1px solid #626262;
   }
 
   .swiper-slide {
@@ -1795,13 +1797,15 @@ body.bg-theme15 {
     padding: 2.5rem;
 }
 .swiper-thumbs .swiper-slide {
-    background: #ccc;
+    border: 1px solid #626262;
     text-align: center;
     padding: 19px;
 }
   .thumb-img {
 	margin-top: 40px;
 	width: 100%;
+	padding-left: 50px !important;
+    padding-right: 50px !important;
   }
   
   .mySwiper {
