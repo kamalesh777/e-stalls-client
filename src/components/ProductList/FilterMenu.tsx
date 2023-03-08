@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FilterMenu = (): JSX.Element => (
-  <div className="card rounded-0 w-100">
+  <div className="card filter-menu rounded-0 w-100">
     <div className="card-body">
       <div className="align-items-center d-flex d-xl-none">
         <h6 className="text-uppercase mb-0">Filter</h6>
@@ -13,42 +13,42 @@ const FilterMenu = (): JSX.Element => (
         <ul className="list-unstyled mb-0 categories-list">
           <li>
             <a href="javascript:;">
-              Clothings <span className="float-end badge rounded-pill bg-light">42</span>
+              Clothings <span className="float-end badge rounded-pill bg-dark">42</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              Sunglasses <span className="float-end badge rounded-pill bg-light">32</span>
+              Sunglasses <span className="float-end badge rounded-pill bg-dark">32</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              Bags <span className="float-end badge rounded-pill bg-light">17</span>
+              Bags <span className="float-end badge rounded-pill bg-dark">17</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              Watches <span className="float-end badge rounded-pill bg-light">217</span>
+              Watches <span className="float-end badge rounded-pill bg-dark">217</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              Furniture <span className="float-end badge rounded-pill bg-light">28</span>
+              Furniture <span className="float-end badge rounded-pill bg-dark">28</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              Shoes <span className="float-end badge rounded-pill bg-light">145</span>
+              Shoes <span className="float-end badge rounded-pill bg-dark">145</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              Accessories <span className="float-end badge rounded-pill bg-light">15</span>
+              Accessories <span className="float-end badge rounded-pill bg-dark">15</span>
             </a>
           </li>
           <li>
             <a href="javascript:;">
-              Headphones <span className="float-end badge rounded-pill bg-light">8</span>
+              Headphones <span className="float-end badge rounded-pill bg-dark">8</span>
             </a>
           </li>
         </ul>

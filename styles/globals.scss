@@ -13,7 +13,7 @@ $bg-dark-3: rgb(0 0 0 / 65%);
 $bg-dark-4: rgb(0 0 0 / 85%);
 
 $bg-light-1: rgb(255, 255, 255);
-$bg-light-2: rgba(255, 255, 255, 0.76);
+$bg-light-2: #f1f3f6;
 
 $bg-color-dark: #00aed1;
 $bg-color-light: rgb(102 225 255);
@@ -31,7 +31,8 @@ input::placeholder {
 }
 
 a {
-	text-decoration: none
+	text-decoration: none;
+	color: $text-dark-1;
 }
 hr {
     margin-bottom: 1.7rem;
@@ -50,10 +51,9 @@ hr {
 	color: $text-dark-1;
 }
 .checkout-form {
-    background: $bg-dark-1;
+    background: $bg-light-2;
 }
 /* Header */
-
 .header-wrapper .top-menu .nav-link {
 	font-size: 95%;
 }
@@ -312,8 +312,14 @@ body.offcanvas-active {
 	background: #003a48;
 } */
 
+/*========== Product-list-page =========*/
 
-
+.product-list-page .filter-menu {
+	background-color: $bg-light-2;
+}
+input[type="checkbox"] + label{
+    margin-left: 5px;
+}
 /* 
 Product Effect 
 ===========================================
@@ -1298,12 +1304,11 @@ ul.categories-list li {
 
 .btn-white,
 .btn-white:hover {
-	background-color: #fff;
-	border-color: #e7eaf3
+	background-color: $bg-light-2 !important;
+	border-color: $bg-dark-2 !important;
 }
 
 /* Card */
-
 .card-group {
 	margin-bottom: 1.5rem
 }
@@ -1850,8 +1855,8 @@ body.bg-theme15 {
 	object-fit: cover;
   }
 
-  .product-list-view .card {
-	background: rgb(3 22 27 / 26%);
+  .product-list-view {
+	background: $bg-light-1;
   }
 
   .product-list-card .product-action {

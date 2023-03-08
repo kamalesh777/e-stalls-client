@@ -1,12 +1,12 @@
 import React from 'react'
-import { BiGrid, BiHeart, BiListUl } from 'react-icons/bi'
+import { BiCartAdd, BiGrid, BiHeart, BiListUl, BiZoomIn } from 'react-icons/bi'
 
 const ListItem = (): JSX.Element => (
   <div className="product-wrapper">
     <div className="toolbox d-flex align-items-center mb-3 gap-2">
       <div className="d-flex flex-wrap flex-grow-1 gap-1">
         <div className="d-flex align-items-center flex-nowrap">
-          <p className="mb-0 font-13 text-nowrap text-white">Sort By:</p>
+          <p className="mb-0 font-13 text-nowrap">Sort By:</p>
           <select className="form-select ms-3 rounded-0">
             <option value="menu_order">Default sorting</option>
             <option value="popularity">Sort by popularity</option>
@@ -19,7 +19,7 @@ const ListItem = (): JSX.Element => (
       </div>
       <div className="d-flex flex-wrap">
         <div className="d-flex align-items-center flex-nowrap">
-          <p className="mb-0 font-13 text-nowrap text-white">Show:</p>
+          <p className="mb-0 font-13 text-nowrap">Show:</p>
           <select className="form-select ms-3 rounded-0">
             <option>9</option>
             <option>12</option>
@@ -41,7 +41,7 @@ const ListItem = (): JSX.Element => (
       <div className="card rounded-0 product-list-card">
         <div className="d-flex align-items-center justify-content-end gap-3 position-absolute end-0 top-0 m-3">
           <div className="product-wishlist">
-            <BiHeart />
+            <BiHeart className="text-dark" />
           </div>
         </div>
         <div className="row g-0">
@@ -77,11 +77,11 @@ const ListItem = (): JSX.Element => (
                 <div className="product-action mt-2">
                   <div className="d-flex gap-2">
                     <a href="#" className="btn btn-ecomm  btn-white">
-                      <i className="bx bxs-cart-add" />
+                      <BiCartAdd className="cart-add" />
                       Add to Cart
                     </a>
                     <a href="#" className="btn btn-ecomm btn-light" data-bs-toggle="modal" data-bs-target="#QuickViewProduct">
-                      <i className="bx bx-zoom-in" />
+                      <BiZoomIn className="zoom-in" />
                       Quick View
                     </a>
                   </div>
