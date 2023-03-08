@@ -4,6 +4,7 @@ import { BiCartAdd, BiHeart, BiX } from 'react-icons/bi'
 import { FreeMode, Navigation, Thumbs } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.min.css'
+import 'swiper/css/navigation'
 
 interface propTypes {
   openModal: boolean
@@ -40,15 +41,14 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
               </SwiperSlide>
             </Swiper>
             <Swiper
-              loop={true}
+              onSwiper={setThumbsSwiper}
               spaceBetween={10}
               slidesPerView={4}
               watchSlidesProgress={true}
-              // navigation={true}
+              navigation={true}
+              freeMode={true}
               modules={[FreeMode, Thumbs, Navigation]}
               className="thumb-img"
-              freeMode={true}
-              onSwiper={setThumbsSwiper}
             >
               <SwiperSlide>
                 <img src="/assets/images/product-gallery/01.png" className="" alt="" />
