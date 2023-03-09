@@ -270,6 +270,7 @@ input[type="checkbox"] + label{
 }
 
 
+
 /*==========Profile===================*/
 .profile-avatar {
 	max-width: 70px;
@@ -484,6 +485,20 @@ ul.categories-list li {
 	left: 0;
 	top: 55%;
 	z-index: 5;
+}
+
+/* ================ order page =================*/
+.order-list-row {
+	padding: 15px 0;
+}
+.order-list-row:not(:last-child) {
+	border-bottom: 1px solid $bg-dark-1;
+}
+.order-product-col img {
+    height: 60px;
+}
+.order-product-col {
+    display: flex;
 }
 
 /* Responsive */
