@@ -253,7 +253,7 @@ Menu
 
 .product-list-page .filter-menu,
 .profile-page .side-bar {
-	background-color: $bg-light-2;
+	background-color: $bg-light-1;
 }
 input[type="checkbox"] + label{
     margin-left: 5px;
@@ -264,6 +264,33 @@ input[type="checkbox"] + label{
 .profile-avatar {
 	max-width: 60px;
 	margin-right: 10px;
+}
+.profile-menu .main-menu{
+	padding: 10px 8px;
+	margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-menu .main-menu, .profile-menu .main-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $bg-dark-3;
+	text-transform: uppercase;
+	
+}
+.profile-menu .sub-menu a {
+	padding: 8px 0;
+    padding-left: 45px;
+	color: $text-dark-1;
+	display: block;
+}
+.profile-menu .sub-menu a:hover {
+	background: $bg-light-2;
+}
+
+.profile-menu .main-menu .menu-icon, .profile-menu .main-menu .menu-icon {
+    font-size: 1.5rem;
+	margin-right: 8px;
 }
 /* 
 Product Effect 

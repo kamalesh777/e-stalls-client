@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
+import { BiBasket, BiChevronRight, BiNotepad, BiUserCircle, BiWallet } from 'react-icons/bi'
 import ManageAddress from '@/components/Profile/Info/ManageAddress'
 import PersonalInfo from '@/components/Profile/Info/PersonalInfo'
 
@@ -8,6 +9,68 @@ const Profile = (): JSX.Element => {
   const router = useRouter()
 
   const lastPathname = router.route.split('/').at(-1)
+
+  const menuArray = [
+    {
+      label: 'My Orders',
+      url: '/profile/orders',
+      icon: <BiBasket />,
+      submenu: [],
+      extra: <BiChevronRight />,
+    },
+    {
+      label: 'Account Settings',
+      icon: <BiUserCircle />,
+      submenu: [
+        {
+          label: 'Profile Information',
+          url: '/profile/account-setting/user-details',
+        },
+        {
+          label: 'Manage Address',
+          url: '/profile/account-setting/manage-address',
+        },
+      ],
+    },
+    {
+      label: 'Payment Setting',
+      icon: <BiWallet />,
+      submenu: [
+        {
+          label: 'UPI',
+          url: '/profile/info/user-details',
+        },
+        {
+          label: 'Cards',
+          url: '/profile/info/manage-address',
+        },
+      ],
+    },
+    {
+      label: 'Others',
+      icon: <BiNotepad />,
+      submenu: [
+        {
+          label: 'My Reviews',
+          url: '/profile/info/user-details',
+        },
+        {
+          label: 'My Wishlist',
+          url: '/profile/info/manage-address',
+        },
+        {
+          label: 'Notifications',
+          url: '/profile/info/manage-address',
+        },
+      ],
+    },
+    // {
+    //   label: 'Logout',
+    //   url: '/profile/orders',
+    //   icon: <BiPowerOff />,
+    //   submenu: [],
+    // },
+  ]
 
   const renderComponent = (pathname: string): JSX.Element => {
     switch (pathname) {
@@ -38,19 +101,33 @@ const Profile = (): JSX.Element => {
             </div>
             <div className="card side-bar rounded-1 w-100">
               <div className="card-body">
-                <div className="product-categories">
-                  <h6 className="text-uppercase mb-3">Categories</h6>
-                  <ul className="list-unstyled mb-0 categories-list">
-                    <li>
-                      <Link href="/profile/info/user-details">
-                        Personal Info <span className="float-end badge rounded-pill bg-dark">42</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/profile/info/manage-address">
-                        Manage Address <span className="float-end badge rounded-pill bg-dark">42</span>
-                      </Link>
-                    </li>
+                <div className="profile-menu">
+                  <ul className="list-unstyled mb-0 menu-list">
+                    {menuArray.map(obj =>
+                      obj.submenu?.length > 0 ? (
+                        obj.submenu.map((item, index) => (
+                          <>
+                            {index === 0 && (
+                              <p className="main-menu">
+                                <span className="menu-icon">{obj.icon}</span> {obj.label}
+                              </p>
+                            )}
+                            <li className="sub-menu">
+                              <Link href={item.url}>{item.label}</Link>
+                            </li>
+                          </>
+                        ))
+                      ) : (
+                        <li className="main-menu" key={obj.label}>
+                          <Link href={obj.url}>
+                            <div>
+                              <span className="menu-icon">{obj.icon}</span> {obj.label}
+                              <span className="float-end fs-4">{obj.extra}</span>
+                            </div>
+                          </Link>
+                        </li>
+                      ),
+                    )}
                   </ul>
                 </div>
               </div>
