@@ -7,42 +7,42 @@ const FilterMenu = (): JSX.Element => (
         <h6 className="text-uppercase mb-3">Categories</h6>
         <ul className="list-unstyled mb-0 categories-list">
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Clothings <span className="float-end badge rounded-pill bg-dark">42</span>
             </a>
           </li>
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Sunglasses <span className="float-end badge rounded-pill bg-dark">32</span>
             </a>
           </li>
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Bags <span className="float-end badge rounded-pill bg-dark">17</span>
             </a>
           </li>
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Watches <span className="float-end badge rounded-pill bg-dark">217</span>
             </a>
           </li>
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Furniture <span className="float-end badge rounded-pill bg-dark">28</span>
             </a>
           </li>
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Shoes <span className="float-end badge rounded-pill bg-dark">145</span>
             </a>
           </li>
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Accessories <span className="float-end badge rounded-pill bg-dark">15</span>
             </a>
           </li>
           <li>
-            <a href="javascript:;">
+            <a href="#">
               Headphones <span className="float-end badge rounded-pill bg-dark">8</span>
             </a>
           </li>

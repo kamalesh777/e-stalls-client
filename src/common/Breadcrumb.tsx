@@ -8,12 +8,12 @@ const Breadcrumb = (): JSX.Element => (
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb mb-0 p-0">
               <li className="breadcrumb-item">
-                <a href="javascript:;">
+                <a href="#">
                   <i className="bx bx-home-alt" /> Home
                 </a>
               </li>
               <li className="breadcrumb-item">
-                <a href="javascript:;">Shop</a>
+                <a href="#">Shop</a>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 Shop List Left Sidebar

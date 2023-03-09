@@ -33,10 +33,10 @@ const ShopCartView = (): JSX.Element => (
               <div className="col-12 col-lg-3">
                 <div className="text-center">
                   <div className="d-flex gap-2 justify-content-center justify-content-lg-end">
-                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
+                    <a href="#" className="btn btn-light rounded-1 btn-ecomm">
                       <BiXCircle className="me-1 fs-5" /> Remove
                     </a>
-                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
+                    <a href="#" className="btn btn-light rounded-1 btn-ecomm">
                       <BiHeart className="fs-5" />
                     </a>
                   </div>
@@ -70,10 +70,10 @@ const ShopCartView = (): JSX.Element => (
               <div className="col-12 col-lg-3">
                 <div className="text-center">
                   <div className="d-flex gap-2 justify-content-center justify-content-lg-end">
-                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
+                    <a href="#" className="btn btn-light rounded-1 btn-ecomm">
                       <BiXCircle className="me-1 fs-5" /> Remove
                     </a>
-                    <a href="javascript:;" className="btn btn-light rounded-1 btn-ecomm">
+                    <a href="#" className="btn btn-light rounded-1 btn-ecomm">
                       <BiHeart className="fs-5" />
                     </a>
                   </div>
@@ -104,7 +104,7 @@ const ShopCartView = (): JSX.Element => (
                 </h5>
                 <div className="my-4" />
                 <div className="d-grid">
-                  <a href="javascript:;" className="btn btn-light btn-ecomm">
+                  <a href="#" className="btn btn-light btn-ecomm">
                     Proceed to Checkout
                   </a>
                 </div>
