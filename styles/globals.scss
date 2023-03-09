@@ -202,11 +202,21 @@ Menu
 		display: block;
 	}
 }
+/*=====================Rating Modal=====================*/
+.review-product {
+    display: flex;
+	padding: 10px;
+	border: 1px solid $bg-dark-1;
+	background: $bg-light-2;
+	border-radius: 5px;
+	margin-bottom: 1.5rem;
+}
 
-/* 
-	Slider
-===========================================
-*/
+.review-product img {
+    height: 80px;
+}
+
+/* ================ Slider=====================*/
 .offer-slider {
 	height: 420px;
 }
