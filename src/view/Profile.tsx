@@ -104,7 +104,7 @@ const Profile = (): JSX.Element => {
                     {menuArray.map(obj =>
                       obj.submenu?.length > 0 ? (
                         obj.submenu.map((item, index) => (
-                          <ul className="menu-row" key={index}>
+                          <div className="menu-row" key={index}>
                             {index === 0 && (
                               <p className="main-menu">
                                 <span className="menu-icon">{obj.icon}</span> {obj.label}
@@ -113,7 +113,7 @@ const Profile = (): JSX.Element => {
                             <li className="sub-menu">
                               <Link href={item.url}>{item.label}</Link>
                             </li>
-                          </ul>
+                          </div>
                         ))
                       ) : (
                         <li className="main-menu" key={obj.label}>
