@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { BiBasket, BiChevronRight, BiNotepad, BiUserCircle, BiWallet } from 'react-icons/bi'
+import { Button } from 'react-bootstrap'
+import { BiBasket, BiChevronRight, BiNotepad, BiPowerOff, BiUserCircle, BiWallet } from 'react-icons/bi'
 import ManageAddress from '@/components/Profile/Info/ManageAddress'
 import PersonalInfo from '@/components/Profile/Info/PersonalInfo'
 
@@ -23,7 +24,7 @@ const Profile = (): JSX.Element => {
       icon: <BiUserCircle />,
       submenu: [
         {
-          label: 'Profile Information',
+          label: 'My Information',
           url: '/profile/account-setting/user-details',
         },
         {
@@ -37,11 +38,11 @@ const Profile = (): JSX.Element => {
       icon: <BiWallet />,
       submenu: [
         {
-          label: 'UPI',
+          label: 'Manage UPI',
           url: '/profile/info/user-details',
         },
         {
-          label: 'Cards',
+          label: 'Manage Cards',
           url: '/profile/info/manage-address',
         },
       ],
@@ -88,19 +89,19 @@ const Profile = (): JSX.Element => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-xl-3">
-            <div className="card side-bar rounded-1 w-100 mb-3">
-              <div className="card-body">
-                <div className="d-flex align-items-center">
-                  <img src="/assets/images/avatars/profile-image.png" className="profile-avatar" />
-                  <div>
-                    <strong className="fs-7">Hello,</strong>
-                    <p className="fs-5 mb-0">Kamalesh Maity</p>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="card side-bar rounded-1 w-100">
               <div className="card-body">
+                <div className="d-flex align-items-center w-100 mb-3">
+                  <img src="/assets/images/avatars/profile-image.png" className="profile-avatar" />
+                  <div>
+                    <p className="fs-5 mb-0">Kamalesh Maity</p>
+                    <Button variant="link" className="p-0 text-danger" size="sm">
+                      <BiPowerOff className="fs-5" />
+                      Logout
+                    </Button>
+                  </div>
+                </div>
+                {/* <hr className="mb-2" /> */}
                 <div className="profile-menu">
                   <ul className="list-unstyled mb-0 menu-list">
                     {menuArray.map(obj =>
