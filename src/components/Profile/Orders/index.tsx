@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 import { BiSearch } from 'react-icons/bi'
 
 import orderData from '@/mock/orders.json'
@@ -59,13 +59,14 @@ const Orders = (): JSX.Element => {
                 <p className="fs-6">₹ {obj.price}</p>
               </Col>
               <Col sm={3}>
-                <p
-                  className={`fs-6 font-weight-bold text-uppercase ${
-                    obj.status_code === 2 ? 'text-success' : obj.status_code === 1 ? 'text-warning' : 'text-danger'
-                  }`}
+                <Button
+                  size="sm"
+                  variant={obj.status_code === 2 ? 'success' : obj.status_code === 1 ? 'warning' : 'danger'}
+                  className="fs-7 font-weight-bold"
+                  disabled
                 >
                   {obj.status}
-                </p>
+                </Button>
               </Col>
             </Row>
           ))}
