@@ -292,6 +292,17 @@ input[type="checkbox"] + label{
     font-size: 1.5rem;
 	margin-right: 8px;
 }
+.profile-box {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -15px;
+    background-color: $bg-light-2;
+    border-radius: 5px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
 /* 
 Product Effect 
 ===========================================

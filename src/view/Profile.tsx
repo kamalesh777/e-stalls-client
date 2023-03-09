@@ -91,12 +91,12 @@ const Profile = (): JSX.Element => {
           <div className="col-12 col-xl-3">
             <div className="card side-bar rounded-1 w-100">
               <div className="card-body">
-                <div className="d-flex align-items-center w-100 mb-3">
+                <div className="profile-box">
                   <img src="/assets/images/avatars/profile-image.png" className="profile-avatar" />
                   <div>
                     <p className="fs-5 mb-0">Kamalesh Maity</p>
                     <Button variant="link" className="p-0 text-danger" size="sm">
-                      <BiPowerOff className="fs-5" />
+                      <BiPowerOff className="fs-5 me-1" />
                       Logout
                     </Button>
                   </div>
