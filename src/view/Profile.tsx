@@ -53,15 +53,15 @@ const Profile = (): JSX.Element => {
       submenu: [
         {
           label: 'My Reviews',
-          url: '/profile/info/user-details',
+          url: '/profile/others/reviews',
         },
         {
           label: 'My Wishlist',
-          url: '/profile/info/manage-address',
+          url: '/profile/others/wishlist',
         },
         {
           label: 'Notifications',
-          url: '/profile/info/manage-address',
+          url: '/profile/others/notificatins',
         },
       ],
     },
