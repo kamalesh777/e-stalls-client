@@ -43,7 +43,9 @@ hr {
 	width: 100%;
 	position: relative
 }
-
+.text-light-2 {
+	color: $text-dark-2
+}
 /* ============ cart-page ================*/
 .cart-page, .wishlist {
 	background: $bg-light-1;
@@ -489,13 +491,17 @@ ul.categories-list li {
 
 /* ================ order page =================*/
 .order-list-row {
-	padding: 15px 0;
+	padding: 12px 0;
+	cursor: pointer;
 }
 .order-list-row:not(:last-child) {
 	border-bottom: 1px solid $bg-dark-1;
 }
+.order-list-row:hover {
+    background: $bg-dark-1;
+}
 .order-product-col img {
-    height: 60px;
+    height: 50px;
 }
 .order-product-col {
     display: flex;

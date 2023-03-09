@@ -40,24 +40,35 @@ const Orders = (): JSX.Element => {
       </Row>
       <div className="card">
         <div className="card-body">
-          {}
-          <Row className="order-list-row g-0">
-            <Col sm={6}>
-              <div className="order-product-col">
-                <img src="/assets/images/products/04.png" className="op-image" />
-                <div className="">
-                  <p className="fs-6 mb-0">Kamalesh Maity</p>
-                  <p className="fs-7 mb-0">Size : M</p>
+          {orderData.map(obj => (
+            <Row className="order-list-row g-0" key={obj._id}>
+              <Col sm={6}>
+                <div className="order-product-col">
+                  <img src={obj.product_image} className="op-image" />
+                  <div className="">
+                    <p className="fs-6 mb-0">{obj.title}</p>
+                    {obj.variant?.map(item => (
+                      <span key={item.value} className="fs-7 mb-0 text-light-2">
+                        {item.label}: {item.value}{' '}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Col>
-            <Col sm={3}>
-              <p className="fs-6">899</p>
-            </Col>
-            <Col sm={3}>
-              <p className="fs-6 font-weight-bold">Cancelled</p>
-            </Col>
-          </Row>
+              </Col>
+              <Col sm={3}>
+                <p className="fs-6">₹ {obj.price}</p>
+              </Col>
+              <Col sm={3}>
+                <p
+                  className={`fs-6 font-weight-bold text-uppercase ${
+                    obj.status_code === 2 ? 'text-success' : obj.status_code === 1 ? 'text-warning' : 'text-danger'
+                  }`}
+                >
+                  {obj.status}
+                </p>
+              </Col>
+            </Row>
+          ))}
         </div>
       </div>
     </>
