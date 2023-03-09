@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { BiBasket, BiChevronRight, BiNotepad, BiPowerOff, BiUserCircle, BiWallet } from 'react-icons/bi'
-import ManageAddress from '@/components/Profile/Info/ManageAddress'
-import PersonalInfo from '@/components/Profile/Info/PersonalInfo'
+import ManageAddress from '@/components/Profile/AccountSetting/ManageAddress'
+import PersonalInfo from '@/components/Profile/AccountSetting/PersonalInfo'
 
 const Profile = (): JSX.Element => {
   const router = useRouter()
