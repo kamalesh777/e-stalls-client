@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap'
 import { BiBasket, BiChevronRight, BiNotepad, BiPowerOff, BiUserCircle, BiWallet } from 'react-icons/bi'
 import ManageAddress from '@/components/Profile/AccountSetting/ManageAddress'
 import PersonalInfo from '@/components/Profile/AccountSetting/PersonalInfo'
+import Orders from '@/components/Profile/Orders'
 
 const Profile = (): JSX.Element => {
   const router = useRouter()
@@ -79,6 +80,8 @@ const Profile = (): JSX.Element => {
         return <PersonalInfo />
       case 'manage-address':
         return <ManageAddress />
+      case 'orders':
+        return <Orders />
       default:
         return <PersonalInfo />
     }

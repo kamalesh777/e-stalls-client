@@ -24,7 +24,7 @@ body {
   	color: $text-dark-1;
 }
 
-input::placeholder {
+input:not(.text-dark)::placeholder {
 	color: $text-light-2 !important;
 	opacity: .3 !important
 }
