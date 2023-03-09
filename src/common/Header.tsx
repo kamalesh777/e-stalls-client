@@ -69,9 +69,9 @@ const HeaderComponent = (): JSX.Element => (
                 <BiMenu />
               </div>
               <div className="logo d-none d-lg-flex">
-                <a href="index.html">
+                <Link href="/">
                   <img src="/assets/images/estalls-logo.webp" className="estalls-logo" alt="" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
