@@ -223,8 +223,13 @@ Menu
 .file-uploader {
     position: relative;
     text-align: center;
-    border: 1px solid #ccc;
-    padding: 20px;
+    border: 2px dashed #ccc;
+    padding: 10px;
+}
+.uploader-icon {
+	font-size: 2rem;
+	opacity: 0.8;
+	color: $bg-color-light
 }
 .file-input {
     opacity: 0;

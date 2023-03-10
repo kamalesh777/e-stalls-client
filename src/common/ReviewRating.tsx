@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Modal, Badge, Form, Button } from 'react-bootstrap'
-import { BiCloudUpload } from 'react-icons/bi'
+import { Modal, Badge, Form, Button, Row, Col } from 'react-bootstrap'
 import { Rating } from 'react-simple-star-rating'
+import Uploader from './Uploader'
 
 interface propTypes {
   openModal: boolean
@@ -18,16 +18,14 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
   const handleRating = (rate: number): void => {
     setRating(rate)
   }
-  const fileHandler = e => {
-    console.log(e)
-  }
+
   return (
     <Modal centered show={openModal} onHide={handleClose} animation={false}>
       <Modal.Body className="py-4">
         <div className="review-product">
           <img src="/assets/images/products/02.png" />
           <div className="review-product-details">
-            <h2 className="fs-5 mb-0">Nova NHT 1039 USB Trim....</h2>
+            <h2 className="fs-6 mb-1">Nova NHT 1039 USB Trim....</h2>
             <div className="review-rating">
               <Badge bg="success" className="me-2">
                 4
@@ -49,7 +47,7 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
             <Form.Label>Rate the product</Form.Label>
             <div className="d-flex">
               <Rating
-                size={34}
+                size={30}
                 allowFraction
                 showTooltip={tooltip}
                 onClick={handleRating}
@@ -60,11 +58,11 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
           </Form.Group>
           <Form.Group controlId="formFileMultiple" className="mb-3">
             <Form.Label>Upload photo</Form.Label>
-            <div className="file-uploader">
-              <BiCloudUpload className="fs-2" />
-              <Form.Control type="file" multiple onChange={e => fileHandler(e)} className="file-input" />
-              <p>Browse Files</p>
-            </div>
+            <Row>
+              <Col md={3}>
+                <Uploader message="Upload" />
+              </Col>
+            </Row>
           </Form.Group>
           <div>
             <Button className="btn btn-light btn-ecom me-2" onClick={handleClose}>
