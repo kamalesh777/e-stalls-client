@@ -94,14 +94,14 @@ const HeaderComponent = (): JSX.Element => (
                     </a>
                   </li>
                   <li className="nav-item ">
-                    <a href="account-dashboard.html" className="nav-link  cart-link">
+                    <Link href="/profile/orders" className="nav-link  cart-link">
                       <BiUser />
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a href="wishlist.html" className="nav-link cart-link">
+                    <Link href="/wishlist" className="nav-link cart-link">
                       <BiHeart />
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item dropdown dropdown-large">
                     <a
