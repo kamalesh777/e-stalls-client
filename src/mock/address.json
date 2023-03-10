@@ -1,0 +1,26 @@
+[
+    {
+        "_id": "38202-2",
+        "name": "Kamalesh Maity",
+        "mobile": 7550826072,
+        "address": "Candor Tech Space, Candor tech space, Gate-2, New Town, West Bengal - 700156",
+        "address_type": "office",
+        "default": false
+    },
+    {
+        "_id": "38202-3",
+        "name": "Souvik Makhal",
+        "mobile": 9903521120,
+        "address": "Bawali Biplab Sangha Club (Naskar Para), Vill: Ghanashyambati, PS: Nodakhali, Budge Budge, West Bengal - 700137",
+        "address_type": "home",
+        "default": true
+    },
+    {
+        "_id": "38202-4",
+        "name": "Sumon Mondal",
+        "mobile": 9593351714,
+        "address": "Alampur Calcutta Spring, Andul, Alampur, Howrah, West Bengal - 711302",
+        "address_type": "office",
+        "default": false
+    }
+]

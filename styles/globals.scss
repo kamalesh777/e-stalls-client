@@ -316,6 +316,50 @@ input[type="checkbox"] + label{
     padding: 22px;
     margin-bottom: 20px;
 }
+.adress-box {
+    margin-bottom: 20px;
+    box-shadow: none;
+	
+}
+.adress-box:hover {
+	box-shadow: inherit;
+}
+.addres-icon {
+    position: absolute;
+    bottom: -14px;
+    right: -14px;
+    background: #fff;
+}
+
+.addres-icon svg {
+    font-size: 3rem !important;
+    opacity: 0.1;
+}
+.addres-icon.active svg {
+	opacity: 1;
+}
+.active svg {
+    color: $bg-color-light;
+}
+.simple-dropdown,
+.simple-dropdown:hover,
+.simple-dropdown:focus,
+.simple-dropdown:active{
+	padding: 0;
+	background-color: transparent !important;
+	border: 0;
+	outline: 0;
+	box-shadow: none !important;
+	color: $text-dark-1;
+}
+.simple-dropdown::after {
+	display: none;
+}
+.option-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
 /* 
 Product Effect 
 ===========================================
@@ -1500,6 +1544,7 @@ ul.categories-list li {
 	font-size: 14px;
 	margin: 8px 0 0;
 	border-radius: 0px;
+	background-color: $bg-light-1;
 }
 
 .header-content .top-cart-icons .dropdown-menu {
