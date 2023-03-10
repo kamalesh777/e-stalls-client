@@ -17,6 +17,9 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
   const handleRating = (rate: number): void => {
     setRating(rate)
   }
+  const fileHandler = (e) => {
+    console.log(e)
+  }
   return (
     <Modal centered show={openModal} onHide={handleClose} animation={false}>
       <Modal.Body className="py-4">
@@ -56,7 +59,7 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
           </Form.Group>
           <Form.Group controlId="formFileMultiple" className="mb-3">
             <Form.Label>Upload photo</Form.Label>
-            <Form.Control type="file" multiple />
+            <Form.Control type="file" multiple onChange={(e) => fileHandler(e)}/>
           </Form.Group>
           <div>
             <Button className="btn btn-light btn-ecom me-2" onClick={handleClose}>
