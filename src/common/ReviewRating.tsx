@@ -19,7 +19,7 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
   }
   return (
     <Modal centered show={openModal} onHide={handleClose} animation={false}>
-      <Modal.Body>
+      <Modal.Body className="py-4">
         <div className="review-product">
           <img src="/assets/images/products/02.png" />
           <div className="review-product-details">
@@ -54,16 +54,20 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
               />
             </div>
           </Form.Group>
+          <Form.Group controlId="formFileMultiple" className="mb-3">
+            <Form.Label>Upload photo</Form.Label>
+            <Form.Control type="file" multiple />
+          </Form.Group>
+          <div>
+            <Button className="btn btn-light btn-ecom me-2" onClick={handleClose}>
+              Upload
+            </Button>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </div>
         </Form>
       </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
-        </Button>
-        <Button className="btn btn-light btn-ecom" onClick={handleClose}>
-          Save Changes
-        </Button>
-      </Modal.Footer>
     </Modal>
   )
 }

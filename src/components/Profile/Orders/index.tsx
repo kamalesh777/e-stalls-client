@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
 import { BiSearch } from 'react-icons/bi'
 
+import ReviewRating from '@/common/ReviewRating'
 import orderData from '@/mock/orders.json'
 
 const Orders = (): JSX.Element => {
-  console.log(orderData)
+  const [openModal, setOpenModal] = useState<boolean>(false)
+
   return (
     <>
       <Row className="g-0 mb-3">
@@ -60,10 +62,10 @@ const Orders = (): JSX.Element => {
               </Col>
               <Col sm={3}>
                 <Button
+                  onClick={() => setOpenModal(true)}
                   size="sm"
                   variant={obj.status_code === 2 ? 'success' : obj.status_code === 1 ? 'warning' : 'danger'}
                   className="fs-7 font-weight-bold"
-                  disabled
                 >
                   {obj.status}
                 </Button>
@@ -72,6 +74,7 @@ const Orders = (): JSX.Element => {
           ))}
         </div>
       </div>
+      <ReviewRating {...{ openModal, setOpenModal }} />
     </>
   )
 }
