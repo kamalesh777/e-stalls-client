@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Modal, Badge, Form, Button } from 'react-bootstrap'
+import { BiCloudUpload } from 'react-icons/bi'
 import { Rating } from 'react-simple-star-rating'
 
 interface propTypes {
@@ -17,7 +18,7 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
   const handleRating = (rate: number): void => {
     setRating(rate)
   }
-  const fileHandler = (e) => {
+  const fileHandler = e => {
     console.log(e)
   }
   return (
@@ -59,7 +60,11 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
           </Form.Group>
           <Form.Group controlId="formFileMultiple" className="mb-3">
             <Form.Label>Upload photo</Form.Label>
-            <Form.Control type="file" multiple onChange={(e) => fileHandler(e)}/>
+            <div className="file-uploader">
+              <BiCloudUpload className="fs-2" />
+              <Form.Control type="file" multiple onChange={e => fileHandler(e)} className="file-input" />
+              <p>Browse Files</p>
+            </div>
           </Form.Group>
           <div>
             <Button className="btn btn-light btn-ecom me-2" onClick={handleClose}>
