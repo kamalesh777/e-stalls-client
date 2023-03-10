@@ -17,6 +17,8 @@ $bg-light-2: #f1f3f6;
 $bg-color-dark: #00aed1;
 $bg-color-light: rgb(102 225 255);
 
+$default-margin-bottom: 20px;
+
 body {
 	font-size: 14px;
 	letter-spacing: .5px;
@@ -314,10 +316,10 @@ input[type="checkbox"] + label{
     background-color: $bg-light-2;
     border-radius: 5px;
     padding: 22px;
-    margin-bottom: 20px;
+    margin-bottom: $default-margin-bottom;
 }
 .adress-box {
-    margin-bottom: 20px;
+    margin-bottom: $default-margin-bottom;
     box-shadow: none;
 	
 }
@@ -359,6 +361,12 @@ input[type="checkbox"] + label{
     position: absolute;
     top: 15px;
     right: 15px;
+}
+.card-extra-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $default-margin-bottom;
 }
 /* 
 Product Effect 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Card, Col, Dropdown, Row } from 'react-bootstrap'
-import { BiDotsVerticalRounded } from 'react-icons/bi'
+import { BiDotsVerticalRounded, BiPlus } from 'react-icons/bi'
 import { HiOutlineHome, HiOutlineOfficeBuilding } from 'react-icons/hi'
 
 import addressData from '@/mock/address.json'
@@ -16,7 +16,7 @@ interface dataType {
 const ManageAddress = (): JSX.Element => {
   const [addressList] = useState<dataType[]>(addressData)
 
-  const individualDropdown = (
+  const individualDropdown = (obj: dataType): JSX.Element => (
     <Dropdown className="option-menu">
       <Dropdown.Toggle id="dropdown-basic" className="simple-dropdown">
         <BiDotsVerticalRounded />
@@ -24,7 +24,7 @@ const ManageAddress = (): JSX.Element => {
 
       <Dropdown.Menu>
         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Make it default</Dropdown.Item>
+        {!obj.default && <Dropdown.Item href="#/action-3">Make it default</Dropdown.Item>}
         <Dropdown.Item className="text-danger">Delete</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
@@ -32,9 +32,13 @@ const ManageAddress = (): JSX.Element => {
   return (
     <div className="card">
       <div className="card-body">
-        <Row>
-          <Col />
-        </Row>
+        <div className="card-extra-header">
+          <h5>Manage Address</h5>
+          <button className="btn btn-light">
+            <BiPlus />
+            Add Address
+          </button>
+        </div>
         <Row>
           {addressList.map(obj => (
             <Col key={obj._id} md={6}>
@@ -48,9 +52,9 @@ const ManageAddress = (): JSX.Element => {
                     )}
                   </div>
 
-                  <h4 className="fs-5">{obj.name}</h4>
+                  <h4 className="fs-6">{obj.name}</h4>
                   <p className="fs-7 mb-0">{obj.address}</p>
-                  {individualDropdown}
+                  {individualDropdown(obj)}
                 </Card.Body>
               </Card>
             </Col>
