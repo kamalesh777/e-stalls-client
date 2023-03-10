@@ -1,5 +1,5 @@
 import React from 'react'
-import { BiCartAdd, BiZoomIn } from 'react-icons/bi'
+import { BiCartAdd, BiTrash } from 'react-icons/bi'
 
 const WishList = (): JSX.Element => (
   <section className="extra-padding wishlist">
@@ -26,7 +26,7 @@ const WishList = (): JSX.Element => (
                         Add to Cart
                       </a>
                       <a href="#" className="btn btn-light btn-ecomm">
-                        <BiZoomIn className="zoom-in" />
+                        <BiTrash className="zoom-in" />
                         Remove Item
                       </a>
                     </div>

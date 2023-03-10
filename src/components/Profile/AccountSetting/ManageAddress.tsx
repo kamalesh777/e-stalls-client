@@ -30,37 +30,35 @@ const ManageAddress = (): JSX.Element => {
     </Dropdown>
   )
   return (
-    <div className="card">
-      <div className="card-body">
-        <div className="card-extra-header">
-          <h5>Manage Address</h5>
-          <button className="btn btn-light">
-            <BiPlus />
-            Add Address
-          </button>
-        </div>
-        <Row>
-          {addressList.map(obj => (
-            <Col key={obj._id} md={6}>
-              <Card className="adress-box">
-                <Card.Body>
-                  <div className={`addres-icon ${obj.default ? 'active' : ''}`}>
-                    {obj.address_type === 'office' ? (
-                      <HiOutlineOfficeBuilding className="fs-3" />
-                    ) : (
-                      <HiOutlineHome className="fs-3" />
-                    )}
-                  </div>
-
-                  <h4 className="fs-6">{obj.name}</h4>
-                  <p className="fs-7 mb-0">{obj.address}</p>
-                  {individualDropdown(obj)}
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+    <div className="content-wrapper">
+      <div className="card-extra-header">
+        <h5>Manage Address</h5>
+        <button className="btn btn-light">
+          <BiPlus />
+          Add Address
+        </button>
       </div>
+      <Row>
+        {addressList.map(obj => (
+          <Col key={obj._id} md={6}>
+            <Card className="adress-box">
+              <Card.Body>
+                <div className={`addres-icon ${obj.default ? 'active' : ''}`}>
+                  {obj.address_type === 'office' ? (
+                    <HiOutlineOfficeBuilding className="fs-3" />
+                  ) : (
+                    <HiOutlineHome className="fs-3" />
+                  )}
+                </div>
+
+                <h4 className="fs-6">{obj.name}</h4>
+                <p className="fs-7 mb-0">{obj.address}</p>
+                {individualDropdown(obj)}
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     </div>
   )
 }

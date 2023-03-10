@@ -9,7 +9,7 @@ import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
-    document.querySelector('body').classList.add('bg-theme', 'bg-theme1')
+    document.querySelector('body').classList.add('bg-theme', 'bg-theme4')
     // import bootstrap.bundle.min.js on initial render
     import('bootstrap/dist/js/bootstrap.bundle.min.js')
   }, [])

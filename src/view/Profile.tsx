@@ -6,6 +6,7 @@ import { BiBasket, BiChevronRight, BiNotepad, BiPowerOff, BiUserCircle, BiWallet
 import ManageAddress from '@/components/Profile/AccountSetting/ManageAddress'
 import PersonalInfo from '@/components/Profile/AccountSetting/PersonalInfo'
 import Orders from '@/components/Profile/Orders'
+import WishList from '@/components/WishList/WishList'
 
 const Profile = (): JSX.Element => {
   const router = useRouter()
@@ -76,6 +77,8 @@ const Profile = (): JSX.Element => {
         return <ManageAddress />
       case 'orders':
         return <Orders />
+      case 'wishlist':
+        return <WishList />
       default:
         return <PersonalInfo />
     }

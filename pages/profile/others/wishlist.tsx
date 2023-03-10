@@ -1,8 +1,13 @@
 import React from 'react'
+import NormalLayout from '@/layout/NormalLayout'
+import Profile from '@/view/Profile'
 
-const wishlist = () => {
+const wishlist = (): JSX.Element => {
+  console.log('hello')
   return (
-    <div>wishlist</div>
+    <NormalLayout>
+      <Profile />
+    </NormalLayout>
   )
 }
 
