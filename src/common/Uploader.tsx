@@ -7,6 +7,7 @@ interface propTypes {
   message: string
   multiple?: boolean
   getUplodedFiles: (arr: fileListType[]) => void
+  uploadFiles: fileListType[]
 }
 
 interface fileListType {
@@ -15,10 +16,11 @@ interface fileListType {
   size: number
   type: string
   name: string
+  url?: string
 }
 
-const Uploader = ({ message, multiple, getUplodedFiles }: propTypes): JSX.Element => {
-  const [fileList, setFileList] = useState<fileListType[]>([])
+const Uploader = ({ message, multiple, getUplodedFiles, uploadFiles }: propTypes): JSX.Element => {
+  const [fileList, setFileList] = useState<fileListType[]>(uploadFiles || [])
 
   const fileHandler = (target): void => {
     const filesArr = [...target.files]
