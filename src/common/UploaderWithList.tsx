@@ -21,6 +21,7 @@ interface propTypes {
 
 const UploaderWithList = ({ column, listType = 'picture', loadFiles, getFiles }: propTypes): JSX.Element => {
   const [uploadFiles, setUploadFiles] = useState<fileListType[]>(loadFiles || [])
+  const [fileList, setFileList] = useState<fileListType[]>(loadFiles || [])
 
   // store files into uploadFiles
   const filesHandler = (fileList: fileListType[]): void => {
@@ -31,6 +32,7 @@ const UploaderWithList = ({ column, listType = 'picture', loadFiles, getFiles }:
   const onRemoveHandler = (id: string): void => {
     const restFiles = uploadFiles.filter(item => item.id !== id)
     setUploadFiles(restFiles)
+    setFileList(restFiles)
   }
 
   // update to the pure component with the latest data
@@ -49,13 +51,13 @@ const UploaderWithList = ({ column, listType = 'picture', loadFiles, getFiles }:
         </Col>
       ))}
       <Col md={column} className="mb-3">
-        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ uploadFiles }} />
+        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ uploadFiles, fileList, setFileList }} />
       </Col>
     </Row>
   ) : (
     <Row>
       <Col md={12} className="mb-3">
-        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ uploadFiles }} />
+        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ uploadFiles, fileList, setFileList }} />
       </Col>
       {uploadFiles?.map(file => (
         <Col md={column} key={file.id} className="mb-2">

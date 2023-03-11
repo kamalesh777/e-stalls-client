@@ -8,6 +8,8 @@ interface propTypes {
   multiple?: boolean
   getUplodedFiles: (arr: fileListType[]) => void
   uploadFiles: fileListType[]
+  fileList: fileListType[]
+  setFileList: (arr: fileListType[]) => void
 }
 
 interface fileListType {
@@ -19,9 +21,7 @@ interface fileListType {
   url?: string
 }
 
-const Uploader = ({ message, multiple, getUplodedFiles, uploadFiles }: propTypes): JSX.Element => {
-  const [fileList, setFileList] = useState<fileListType[]>(uploadFiles || [])
-
+const Uploader = ({ message, multiple, getUplodedFiles, uploadFiles, fileList, setFileList }: propTypes): JSX.Element => {
   const fileHandler = (target): void => {
     const filesArr = [...target.files]
     // make trnsform of the image with base64
@@ -43,6 +43,9 @@ const Uploader = ({ message, multiple, getUplodedFiles, uploadFiles }: propTypes
     const freshArray = distinct(fileList, ['name'], false)
     getUplodedFiles(freshArray as unknown as fileListType[])
   }, [fileList?.length])
+
+  console.log('UploadFiles', uploadFiles)
+  console.log('fileList', fileList)
 
   return (
     <div className="file-uploader">
