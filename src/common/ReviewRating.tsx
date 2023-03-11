@@ -91,7 +91,7 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
           </Form.Group>
           <Form.Group controlId="formFileMultiple" className="mb-3">
             <Form.Label>Upload photo</Form.Label>
-            <UploaderWithList column={3} getFiles={updateFilesHandler} loadFiles={fileList} />
+            <UploaderWithList column={12} getFiles={updateFilesHandler} listType="text" loadFiles={fileList} />
           </Form.Group>
           <div>
             <Button className="btn btn-light btn-ecom me-2" onClick={handleClose}>

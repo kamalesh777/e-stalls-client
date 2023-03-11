@@ -58,9 +58,9 @@ const UploaderWithList = ({ column, listType = 'picture', loadFiles, getFiles }:
         <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ uploadFiles }} />
       </Col>
       {uploadFiles?.map(file => (
-        <Col md={column} key={file.id} className="mb-3">
-          <div className="file-list">
-            <p className="mb-2 p-3">{File.name}</p>
+        <Col md={column} key={file.id} className="mb-2">
+          <div className="file-list text">
+            <p className="mb-0">{file.name}</p>
             <BiTrash className="trash-icon" onClick={() => onRemoveHandler(file.id)} />
           </div>
         </Col>
