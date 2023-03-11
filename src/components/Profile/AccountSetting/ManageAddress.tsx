@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Card, Col, Dropdown, Row } from 'react-bootstrap'
-import { BiDotsVerticalRounded, BiPlus } from 'react-icons/bi'
+import { BiCheckSquare, BiDotsVerticalRounded, BiEdit, BiPlus, BiTrash } from 'react-icons/bi'
 import { HiOutlineHome, HiOutlineOfficeBuilding } from 'react-icons/hi'
 
 import addressData from '@/mock/address.json'
@@ -23,9 +23,20 @@ const ManageAddress = (): JSX.Element => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-        {!obj.default && <Dropdown.Item href="#/action-3">Make it default</Dropdown.Item>}
-        <Dropdown.Item className="text-danger">Delete</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">
+          <BiEdit className="me-2 fs-5" />
+          Edit
+        </Dropdown.Item>
+        {!obj.default && (
+          <Dropdown.Item href="#/action-3">
+            <BiCheckSquare className="me-2 fs-5" />
+            Make it default
+          </Dropdown.Item>
+        )}
+        <Dropdown.Item className="text-danger">
+          <BiTrash className="me-2 fs-5" />
+          Delete
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   )

@@ -419,6 +419,9 @@ input[type="checkbox"] + label{
 .active svg {
     color: $bg-color-light;
 }
+.dropdown-item {
+    padding: 8px 10px;
+}
 .simple-dropdown,
 .simple-dropdown:hover,
 .simple-dropdown:focus,
