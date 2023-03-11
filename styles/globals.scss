@@ -226,7 +226,7 @@ Menu
 .file-uploader {
     position: relative;
     text-align: center;
-    border: 2px dashed #ccc;
+    border: 2px dashed $bg-dark-1;
     padding: 10px;
 }
 .uploader-icon {
@@ -243,6 +243,15 @@ Menu
     left: 0;
 }
 
+.file-list {
+    padding: 5px;
+    border: 2px dashed $bg-dark-1;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
 
 /* ================ Slider=====================*/
 .offer-slider {

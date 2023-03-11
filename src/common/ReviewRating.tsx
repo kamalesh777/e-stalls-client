@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React, { useState } from 'react'
 import { Modal, Badge, Form, Button, Row, Col } from 'react-bootstrap'
 import { Rating } from 'react-simple-star-rating'
@@ -7,10 +8,18 @@ interface propTypes {
   openModal: boolean
   setOpenModal: (params: boolean) => void
 }
+interface fileListType {
+  id: string
+  thumbnailUrl: string
+  size: number
+  type: string
+  name: string
+}
 
 const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
   const [tooltip, setTooltip] = useState<boolean>(false)
-  const [, setRating] = useState<number>(0)
+  const [rating, setRating] = useState<number>(0)
+  const [uploadFiles, setUploadFiles] = useState<fileListType[]>([])
   const handleClose = (): void => {
     setOpenModal(false)
   }
@@ -18,6 +27,12 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
   const handleRating = (rate: number): void => {
     setRating(rate)
   }
+
+  const filesHandler = (fileList: fileListType[]): void => {
+    setUploadFiles(fileList)
+  }
+
+  console.log('uploadFiles', uploadFiles)
 
   return (
     <Modal centered show={openModal} onHide={handleClose} animation={false}>
@@ -59,8 +74,15 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
           <Form.Group controlId="formFileMultiple" className="mb-3">
             <Form.Label>Upload photo</Form.Label>
             <Row>
-              <Col md={3}>
-                <Uploader message="Upload" />
+              {uploadFiles?.map(file => (
+                <Col md={3} key={file.id} className="mb-3">
+                  <div className="file-list">
+                    <img src={file.thumbnailUrl} className="img-fluid" alt={file.name} />
+                  </div>
+                </Col>
+              ))}
+              <Col md={3} className="mb-3">
+                <Uploader message="Upload" multiple getUplodedFiles={filesHandler} grid={3}/>
               </Col>
             </Row>
           </Form.Group>
