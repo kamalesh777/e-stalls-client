@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Form } from 'react-bootstrap'
 import { BiCloudUpload } from 'react-icons/bi'
 import { distinct, getBase64, randomKeyGenerator } from '@/utils/commonFUnctions'
-
+import { Toast } from './ToastMessage'
 interface propTypes {
   message: string
   multiple?: boolean
   getUplodedFiles: (arr: fileListType[]) => void
-  uploadFiles: fileListType[]
   fileList: fileListType[]
-  setFileList: (arr: fileListType[]) => void
+  setFileList: (params) => fileListType[]
 }
 
 interface fileListType {
@@ -21,20 +20,27 @@ interface fileListType {
   url?: string
 }
 
-const Uploader = ({ message, multiple, getUplodedFiles, uploadFiles, fileList, setFileList }: propTypes): JSX.Element => {
+const Uploader = ({ message, multiple, getUplodedFiles, fileList, setFileList }: propTypes): JSX.Element => {
   const fileHandler = (target): void => {
     const filesArr = [...target.files]
     // make trnsform of the image with base64
-    filesArr.map(item =>
-      getBase64(item, cb => {
-        const fileObj = {
-          id: randomKeyGenerator(3),
-          name: item.name,
-          size: item.size,
-          type: item.type,
-          thumbnailUrl: cb,
+    filesArr.map(file =>
+      getBase64(file, cb => {
+        // it will check image size less than 2 mb
+        const isLt2M = file.size / 1024 / 1024 < 2
+        if (!isLt2M) {
+          Toast('error', 'File must be less than 2 mb')
+        } else {
+          const newFileArr = {
+            id: randomKeyGenerator(3),
+            name: file.name,
+            size: file.size,
+            type: file.type,
+            thumbnailUrl: cb,
+          }
+          // const data = fileList.concat(newFileArr)
+          setFileList(prevState => [...prevState, newFileArr])
         }
-        setFileList(prevState => [...prevState, fileObj])
       }),
     )
   }
@@ -43,9 +49,6 @@ const Uploader = ({ message, multiple, getUplodedFiles, uploadFiles, fileList, s
     const freshArray = distinct(fileList, ['name'], false)
     getUplodedFiles(freshArray as unknown as fileListType[])
   }, [fileList?.length])
-
-  console.log('UploadFiles', uploadFiles)
-  console.log('fileList', fileList)
 
   return (
     <div className="file-uploader">

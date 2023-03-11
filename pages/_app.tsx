@@ -5,6 +5,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css'
 import '../styles/globals.scss'
 
 import { useEffect } from 'react'
+import ToastWrapper from '@/common/ToastMessage'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Component {...pageProps} />
+      <ToastWrapper />
     </>
   )
 }

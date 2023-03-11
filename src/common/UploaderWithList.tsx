@@ -20,29 +20,27 @@ interface propTypes {
 }
 
 const UploaderWithList = ({ column, listType = 'picture', loadFiles, getFiles }: propTypes): JSX.Element => {
-  const [uploadFiles, setUploadFiles] = useState<fileListType[]>(loadFiles || [])
   const [fileList, setFileList] = useState<fileListType[]>(loadFiles || [])
 
   // store files into uploadFiles
   const filesHandler = (fileList: fileListType[]): void => {
-    setUploadFiles(fileList)
+    setFileList(fileList)
   }
 
   // file Remove Handler
   const onRemoveHandler = (id: string): void => {
-    const restFiles = uploadFiles.filter(item => item.id !== id)
-    setUploadFiles(restFiles)
+    const restFiles = fileList.filter(item => item.id !== id)
     setFileList(restFiles)
   }
 
   // update to the pure component with the latest data
   useEffect(() => {
-    getFiles(uploadFiles)
-  }, [uploadFiles.length])
+    getFiles(fileList)
+  }, [fileList.length])
 
   return listType === 'picture' ? (
     <Row>
-      {uploadFiles?.map(file => (
+      {fileList?.map(file => (
         <Col md={column} key={file.id} className="mb-3">
           <div className="file-list picture">
             <img src={file.thumbnailUrl} className="img-fluid" alt={file.name} />
@@ -51,15 +49,15 @@ const UploaderWithList = ({ column, listType = 'picture', loadFiles, getFiles }:
         </Col>
       ))}
       <Col md={column} className="mb-3">
-        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ uploadFiles, fileList, setFileList }} />
+        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ fileList, setFileList }} />
       </Col>
     </Row>
   ) : (
     <Row>
       <Col md={12} className="mb-3">
-        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ uploadFiles, fileList, setFileList }} />
+        <Uploader message="Upload" multiple getUplodedFiles={filesHandler} {...{ fileList, setFileList }} />
       </Col>
-      {uploadFiles?.map(file => (
+      {fileList?.map(file => (
         <Col md={column} key={file.id} className="mb-2">
           <div className="file-list text">
             <p className="mb-0">{file.name}</p>

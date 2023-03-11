@@ -1,30 +1,36 @@
-import { notification } from 'antd'
-import type { NotificationPlacement } from 'antd/es/notification/interface'
+import React from 'react'
 
-type NotificationType = 'success' | 'info' | 'warning' | 'error'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
-const openNotificationWithIcon = (
-  type: NotificationType,
-  title: string,
-  description: string,
-  className?: string,
-  placement?: NotificationPlacement,
-): void => {
-  notification[type]({
-    message: title,
-    description,
-    className: `notify-box ${className ?? ''}`,
-    placement: placement != null ? placement : 'top',
-  })
+interface argTypes {
+  errorType: 'error' | 'info' | 'success' | 'warning'
+  message: string
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-const ToastMessage = (
-  type: NotificationType,
-  title: string,
-  description: string,
-  className?: string,
-  placement?: NotificationPlacement,
-) => openNotificationWithIcon(type, title, description, className, placement)
+const ToastWrapper = (): JSX.Element => (
+  <ToastContainer
+    position="top-center"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="light"
+  />
+)
 
-export default ToastMessage
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export const Toast = (errorType: argTypes['errorType'], message: argTypes['message']) =>
+  toast[errorType](message, {
+    position: 'top-center',
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    theme: 'light',
+  })
+export default ToastWrapper
