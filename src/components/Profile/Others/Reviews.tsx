@@ -58,13 +58,13 @@ const Reviews = (): JSX.Element => {
       <div className="profile-review">
         <div className="review-list-card">
           <div className="review-haeder">
-            <Col sm={5} md={6}>
+            <Col sm={5} md={5}>
               Product Name
             </Col>
             <Col sm={2} md={1}>
               Rating
             </Col>
-            <Col sm={4} md={4}>
+            <Col sm={4} md={5}>
               Review
             </Col>
             <Col sm={1} md={1}>
@@ -73,7 +73,7 @@ const Reviews = (): JSX.Element => {
           </div>
           {reviewList.map(obj => (
             <div className="review-rows" key={obj._id}>
-              <Col sm={5} md={6}>
+              <Col sm={5} md={5}>
                 <div className="d-flex align-items-center">
                   <div className="review-product mb-0">
                     <img src={obj.product_image} className="img-fluid" />
@@ -87,7 +87,7 @@ const Reviews = (): JSX.Element => {
                   <BiStar className="ms-1" />
                 </Badge>
               </Col>
-              <Col sm={4} md={4}>
+              <Col sm={4} md={5}>
                 {obj.review_description}
               </Col>
 
