@@ -7,6 +7,7 @@ import ManageAddress from '@/components/Profile/AccountSetting/ManageAddress'
 import PersonalInfo from '@/components/Profile/AccountSetting/PersonalInfo'
 import Orders from '@/components/Profile/Orders'
 import WishList from '@/components/WishList/WishList'
+import Reviews from '@/components/Profile/Others/Reviews'
 
 const Profile = (): JSX.Element => {
   const router = useRouter()
@@ -79,6 +80,8 @@ const Profile = (): JSX.Element => {
         return <Orders />
       case 'wishlist':
         return <WishList column={3} />
+      case 'reviews':
+        return <Reviews />
       default:
         return <PersonalInfo />
     }
