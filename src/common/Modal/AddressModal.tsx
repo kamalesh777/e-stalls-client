@@ -17,9 +17,17 @@ const AddressModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
     <ModalWrapper {...{ openModal, setOpenModal }}>
       <Modal.Body className="p-4">
         <Form>
+          <Form.Group className="mb-3" controlId="addressType">
+            <Form.Label>Address Type </Form.Label>
+            <div className="mb-3">
+              <Form.Check inline label="Home" name="home" type="radio" id="home" />
+              <Form.Check inline label="Office" name="office" type="radio" id="office" />
+              <Form.Check inline label="Other" name="other" type="radio" id="other" />
+            </div>
+          </Form.Group>
           <Form.Group className="mb-3" controlId="pincode">
             <Form.Label>Pincode</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control type="text" placeholder="Pincode" className="text-dark" />
           </Form.Group>
           <Row>
             <Form.Group as={Col} md="6" className="mb-3" controlId="username">
@@ -56,14 +64,7 @@ const AddressModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
               <Form.Control type="text" placeholder="Mobile (Alternate)" className="text-dark" />
             </Form.Group>
           </Row>
-          <Form.Group className="mb-3" controlId="addressType">
-            <Form.Label>Address Type </Form.Label>
-            <div className="mb-3">
-              <Form.Check inline label="Home" name="home" type="radio" id="home" />
-              <Form.Check inline label="Office" name="office" type="radio" id="office" />
-              <Form.Check inline label="Other" name="other" type="radio" id="other" />
-            </div>
-          </Form.Group>
+
           <div>
             <Button className="btn btn-light btn-ecom me-2" onClick={handleClose}>
               Submit
