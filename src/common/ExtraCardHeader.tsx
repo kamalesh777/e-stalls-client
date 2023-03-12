@@ -8,7 +8,7 @@ interface propTypes {
 
 const ExtraCardHeader = ({ title, rightComponent, classes }: propTypes): JSX.Element => (
   <div className="card-extra-header">
-    <h5 className={`font-weight-bold ${classes}`}>{title}</h5>
+    <h5 className={`font-weight-bold ${classes} mb-0`}>{title}</h5>
     {rightComponent}
   </div>
 )

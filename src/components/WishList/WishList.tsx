@@ -15,7 +15,7 @@ const WishList = ({ classes, showHeader, column }: propTypes): JSX.Element => (
       <div className="container">
         <Row>
           <Col>
-            <ExtraCardHeader title="Wishlist" classes="fs-3" />
+            <ExtraCardHeader title="Wishlist" />
           </Col>
         </Row>
       </div>

@@ -10,7 +10,7 @@ const PersonalInfo = (): JSX.Element => {
       <ExtraCardHeader title="My Information" />
       <div className="card">
         <div className="card-body">
-          <Form className="p-4">
+          <Form className="p-2">
             <Row className="mb-3">
               <Form.Group as={Col} md="5" controlId="first_name">
                 <Form.Label>First name</Form.Label>

@@ -4,7 +4,7 @@ import NormalLayout from '@/layout/NormalLayout'
 
 const index = (): JSX.Element => (
   <NormalLayout>
-    <WishList classes="extra-padding" column={3} showHeader={true} />
+    <WishList classes="extra-padding" column={3} />
   </NormalLayout>
 )
 
