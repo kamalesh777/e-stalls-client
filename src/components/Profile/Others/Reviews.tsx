@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Col, Badge, Dropdown } from 'react-bootstrap'
-import { BiCheckSquare, BiDotsVerticalRounded, BiEdit, BiPlus, BiStar, BiTrash } from 'react-icons/bi'
+import { BiDotsVerticalRounded, BiEdit, BiPlus, BiStar, BiTrash } from 'react-icons/bi'
 import ExtraCardHeader from '@/common/ExtraCardHeader'
 import ReviewRating from '@/common/Modal/ReviewRating'
 
