@@ -55,7 +55,7 @@ const Profile = (): JSX.Element => {
       icon: <BiNotepad />,
       submenu: [
         {
-          label: 'My Reviews',
+          label: 'Reviews & Ratings',
           url: '/profile/others/reviews',
         },
         {
