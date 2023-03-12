@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Col, Badge, Dropdown } from 'react-bootstrap'
+import { Col, Badge, Dropdown, Row } from 'react-bootstrap'
 import { BiDotsVerticalRounded, BiEdit, BiPlus, BiStar, BiTrash } from 'react-icons/bi'
 import ExtraCardHeader from '@/common/ExtraCardHeader'
 import ReviewRating from '@/common/Modal/ReviewRating'
@@ -9,7 +9,7 @@ import reviewData from '@/mock/reviews.json'
 interface reviewTypes {
   _id: string
   product_image: string
-  product_title: string
+  product_name: string
   rating: number
   rating_label: string
   like: number
@@ -50,42 +50,43 @@ const Reviews = (): JSX.Element => {
       <div className="profile-review">
         <div className="review-list-card">
           <div className="review-haeder">
-            <Col sm={5} md={5}>
-              Product Name
-            </Col>
-            <Col sm={2} md={1}>
-              Rating
-            </Col>
-            <Col sm={4} md={5}>
-              Review
-            </Col>
-            <Col sm={1} md={1}>
-              Action
-            </Col>
+            <Row>
+              <Col sm={5} md={4}>
+                Product Name
+              </Col>
+              <Col sm={6} md={7}>
+                Review
+              </Col>
+              <Col sm={1} md={1}>
+                Action
+              </Col>
+            </Row>
           </div>
           {reviewList.map(obj => (
             <div className="review-rows" key={obj._id}>
-              <Col sm={5} md={5}>
-                <div className="d-flex align-items-center">
-                  <div className="review-product mb-0">
-                    <img src={obj.product_image} className="img-fluid" />
+              <Row>
+                <Col sm={5} md={4}>
+                  <div className="d-flex align-items-center">
+                    <div className="review-product mb-0">
+                      <img src={obj.product_image} className="img-fluid" />
+                    </div>
+                    <div className="p-name">
+                      <h2 className="fs-7 mb-0">{obj.product_name}</h2>
+                      <Badge bg="success" className="fs-7">
+                        {obj.rating}
+                        <BiStar className="ms-1" />
+                      </Badge>
+                    </div>
                   </div>
-                  <h2 className="fs-6 mb-0">Nova NHT 1039 USB Trim....</h2>
-                </div>
-              </Col>
-              <Col sm={2} md={1}>
-                <Badge bg="success" className="fs-7">
-                  {obj.rating}
-                  <BiStar className="ms-1" />
-                </Badge>
-              </Col>
-              <Col sm={4} md={5}>
-                {obj.review_description}
-              </Col>
+                </Col>
+                <Col sm={6} md={7}>
+                  {obj.review_description}
+                </Col>
 
-              <Col sm={1} md={1}>
-                {individualDropdown(obj)}
-              </Col>
+                <Col sm={1} md={1}>
+                  {individualDropdown(obj)}
+                </Col>
+              </Row>
             </div>
           ))}
         </div>

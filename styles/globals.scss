@@ -230,12 +230,7 @@ Menu
 .react-simple-star-rating-tooltip {
     padding: 3px 6px  !important;
 }
-.review-haeder,
-.review-rows {
-	display: flex;
-    flex-wrap: wrap;
-	align-items: center;
-}
+
 .review-rows {
     background: $bg-light-2;
     border: 1px solid $bg-dark-1;
@@ -249,6 +244,7 @@ Menu
 }
 .review-rows .review-product {
 	border: 0;
+	width: 120px;
 }
 /* ==============File Uploader=================*/
 .file-uploader {
