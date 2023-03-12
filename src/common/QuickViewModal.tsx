@@ -97,15 +97,19 @@ const QuickViewModal = ({ openModal, setOpenModal }: propTypes): JSX.Element => 
                 <dd className="col-sm-9">Russia, USA, and Europe</dd>
               </dl>
               <div className="row row-cols-auto align-items-center mt-3">
-                <div className="col">
+                <div className="col-3">
                   <label className="form-label">Quantity</label>
-                  <select className="form-select form-select-sm">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+                  <input
+                    className="form-control bg-light form-select-sm"
+                    type="number"
+                    min={1}
+                    max={10}
+                    onKeyPress={event => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault()
+                      }
+                    }}
+                  />
                 </div>
                 <div className="col">
                   <label className="form-label">Size</label>
