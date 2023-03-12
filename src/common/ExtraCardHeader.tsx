@@ -3,11 +3,12 @@ import React from 'react'
 interface propTypes {
   title: string
   rightComponent?: JSX.Element
+  classes?: string
 }
 
-const ExtraCardHeader = ({ title, rightComponent }: propTypes): JSX.Element => (
+const ExtraCardHeader = ({ title, rightComponent, classes }: propTypes): JSX.Element => (
   <div className="card-extra-header">
-    <h5 className="font-weight-bold">{title}</h5>
+    <h5 className={`font-weight-bold ${classes}`}>{title}</h5>
     {rightComponent}
   </div>
 )

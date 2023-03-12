@@ -1,12 +1,29 @@
+import ExtraCardHeader from '@/common/ExtraCardHeader'
 import React from 'react'
+import { Row, Col } from 'react-bootstrap'
 import { BiCartAdd, BiTrash } from 'react-icons/bi'
 
-const WishList = (): JSX.Element => (
-  <section className="extra-padding wishlist">
+interface propTypes {
+  classes?: string
+  showHeader?: boolean
+  column: number
+}
+
+const WishList = ({ classes, showHeader, column }: propTypes): JSX.Element => (
+  <section className={`wishlist ${classes}`}>
+    {showHeader && (
+      <div className="container">
+        <Row>
+          <Col>
+            <ExtraCardHeader title="Wishlist" classes="fs-3" />
+          </Col>
+        </Row>
+      </div>
+    )}
     <div className="container">
       <div className="product-grid">
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 g-3">
-          <div className="col">
+        <Row>
+          <Col md={column}>
             <div className="card rounded-1 product-card">
               <div className="product-image">
                 <img src="/assets/images/products/01.png" className="card-img-top" alt="..." />
@@ -34,8 +51,8 @@ const WishList = (): JSX.Element => (
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
     </div>
   </section>

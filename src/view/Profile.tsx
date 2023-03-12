@@ -78,7 +78,7 @@ const Profile = (): JSX.Element => {
       case 'orders':
         return <Orders />
       case 'wishlist':
-        return <WishList />
+        return <WishList column={3} />
       default:
         return <PersonalInfo />
     }

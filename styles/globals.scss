@@ -28,7 +28,9 @@ body {
 	font-family: Roboto, sans-serif;
   	color: $text-dark-1;
 }
-
+input::placeholder {
+	font-size: 0.8rem;
+}
 input:not(.text-dark)::placeholder {
 	color: $text-light-2 !important;
 	opacity: .3 !important
@@ -454,6 +456,9 @@ input[type="checkbox"] + label{
 Product Effect 
 ===========================================
 */
+.product-image {
+    padding-top: 15px;
+}
 .shoping-cart {
     padding: 3rem;
     background: rgb(69 199 231 / 25%);
