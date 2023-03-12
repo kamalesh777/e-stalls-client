@@ -46,15 +46,7 @@ const Reviews = (): JSX.Element => {
   )
   return (
     <div className="content-wrapper">
-      <ExtraCardHeader
-        title="Manage Address"
-        rightComponent={
-          <button className="btn btn-light" onClick={() => setOpenModal(true)}>
-            <BiPlus />
-            Add Address
-          </button>
-        }
-      />
+      <ExtraCardHeader title="Reviews (3)" />
       <div className="profile-review">
         <div className="review-list-card">
           <div className="review-haeder">
