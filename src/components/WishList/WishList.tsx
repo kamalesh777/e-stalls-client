@@ -1,7 +1,7 @@
-import ExtraCardHeader from '@/common/ExtraCardHeader'
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import { BiCartAdd, BiTrash } from 'react-icons/bi'
+import ExtraCardHeader from '@/common/ExtraCardHeader'
 
 interface propTypes {
   classes?: string
