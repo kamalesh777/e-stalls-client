@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
 import { BiSearch } from 'react-icons/bi'
 
-import ReviewRating from '@/common/ReviewRating'
+import ReviewRating from '@/common/Modal/ReviewRating'
 import orderData from '@/mock/orders.json'
 
 const Orders = (): JSX.Element => {

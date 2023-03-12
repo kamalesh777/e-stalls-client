@@ -3,6 +3,8 @@ import { Card, Col, Dropdown, Row } from 'react-bootstrap'
 import { BiCheckSquare, BiDotsVerticalRounded, BiEdit, BiPlus, BiTrash } from 'react-icons/bi'
 import { HiOutlineHome, HiOutlineOfficeBuilding } from 'react-icons/hi'
 
+import ExtraCardHeader from '@/common/ExtraCardHeader'
+import AddressModal from '@/common/Modal/AddressModal'
 import addressData from '@/mock/address.json'
 
 interface dataType {
@@ -15,7 +17,9 @@ interface dataType {
 }
 const ManageAddress = (): JSX.Element => {
   const [addressList] = useState<dataType[]>(addressData)
+  const [openModal, setOpenModal] = useState<boolean>(false)
 
+  // dropdown option
   const individualDropdown = (obj: dataType): JSX.Element => (
     <Dropdown className="option-menu">
       <Dropdown.Toggle id="dropdown-basic" className="simple-dropdown">
@@ -42,13 +46,15 @@ const ManageAddress = (): JSX.Element => {
   )
   return (
     <div className="content-wrapper">
-      <div className="card-extra-header">
-        <h5>Manage Address</h5>
-        <button className="btn btn-light">
-          <BiPlus />
-          Add Address
-        </button>
-      </div>
+      <ExtraCardHeader
+        title="Manage Address"
+        rightComponent={
+          <button className="btn btn-light" onClick={() => setOpenModal(true)}>
+            <BiPlus />
+            Add Address
+          </button>
+        }
+      />
       <Row>
         {addressList.map(obj => (
           <Col key={obj._id} md={6}>
@@ -70,6 +76,7 @@ const ManageAddress = (): JSX.Element => {
           </Col>
         ))}
       </Row>
+      <AddressModal {...{ openModal, setOpenModal }} />
     </div>
   )
 }

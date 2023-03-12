@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Modal, Badge, Form, Button } from 'react-bootstrap'
 import { Rating } from 'react-simple-star-rating'
 import { tooltipArray } from '@/mock/ratingData.js'
-import UploaderWithList from './UploaderWithList'
+import ModalWrapper from '../ModalWrapper'
+import UploaderWithList from '../UploaderWithList'
 
 interface propTypes {
   openModal: boolean
@@ -52,7 +53,7 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
   }, [])
 
   return (
-    <Modal centered show={openModal} onHide={handleClose} animation={false}>
+    <ModalWrapper {...{ openModal, setOpenModal }}>
       <Modal.Body className="py-4">
         <div className="review-product">
           <img src="/assets/images/products/02.png" />
@@ -103,7 +104,7 @@ const ReviewRating = ({ openModal, setOpenModal }: propTypes): JSX.Element => {
           </div>
         </Form>
       </Modal.Body>
-    </Modal>
+    </ModalWrapper>
   )
 }
 
