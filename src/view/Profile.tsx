@@ -88,7 +88,7 @@ const Profile = (): JSX.Element => {
   }
 
   return (
-    <section className="extra-padding product-list-view bg-light">
+    <section className="extra-padding product-list-view bg-white">
       <div className="container">
         <div className="row">
           <div className="col-12 col-xl-3">
