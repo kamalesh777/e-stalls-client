@@ -13,7 +13,7 @@ const Orders = (): JSX.Element => {
       <Row className="g-0 mb-3">
         <Col md={4}>
           <div className="input-search">
-            <input type="text" className="form-control text-dark w-100" placeholder="Search your orders here" />
+            <input type="text" className="form-control text-dark w-100 bg-white" placeholder="Search your orders here" />
             <BiSearch className="searchBtn" />
           </div>
         </Col>
