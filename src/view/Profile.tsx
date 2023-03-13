@@ -36,20 +36,20 @@ const Profile = (): JSX.Element => {
         },
       ],
     },
-    {
-      label: 'Payment Setting',
-      icon: <BiWallet />,
-      submenu: [
-        {
-          label: 'Manage UPI',
-          url: '/profile/info/user-details',
-        },
-        {
-          label: 'Manage Cards',
-          url: '/profile/info/manage-address',
-        },
-      ],
-    },
+    // {
+    //   label: 'Payment Setting',
+    //   icon: <BiWallet />,
+    //   submenu: [
+    //     {
+    //       label: 'Manage UPI',
+    //       url: '/profile/info/user-details',
+    //     },
+    //     {
+    //       label: 'Manage Cards',
+    //       url: '/profile/info/manage-address',
+    //     },
+    //   ],
+    // },
     {
       label: 'Others',
       icon: <BiNotepad />,
