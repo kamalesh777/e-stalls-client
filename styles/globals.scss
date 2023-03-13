@@ -116,6 +116,9 @@ hr {
 .top-menu {
 	background: $bg-color-dark;
 }
+.top-menu .navbar-expand {
+    padding: 0;
+}
 .top-menu .nav-link{
   color: $text-light-1;
 }
